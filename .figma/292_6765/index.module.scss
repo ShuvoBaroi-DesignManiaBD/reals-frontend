@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+.rectangle193 {
+  display: flex;
+  align-items: flex-start;
+  border-radius: 5px;
+  background: #c347fc;
+  padding: 18px 85px 23px 81px;
+  width: 316px;
+  height: 58px;
+
+  .button {
+    line-height: 17px;
+    letter-spacing: 0;
+    color: #ffffff;
+    font-family: "Nunito Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: UPPERCASE;
+  }
+}

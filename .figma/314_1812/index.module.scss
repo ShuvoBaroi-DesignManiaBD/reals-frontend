@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+.group12708 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 121px;
+  width: 1322px;
+  height: 777px;
+
+  .autoWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    margin-top: 100px;
+
+    .reLsPiedzVojumsPasKu {
+      margin: 0px 0px 0px 2px;
+      width: 492px;
+      line-height: 40px;
+      letter-spacing: 0;
+      color: #000000;
+      font-family: Poppins, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    .jauVairKNek10GadusMs {
+      margin: 48px 0px 0px 2px;
+      width: 517px;
+      line-height: 25px;
+      letter-spacing: 0;
+      color: #000000;
+      font-family: Poppins, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+      font-size: 18px;
+    }
+
+    .rectangle193 {
+      display: flex;
+      align-items: flex-start;
+      align-self: stretch;
+      margin-top: 149px;
+      margin-right: 73px;
+      border-radius: 5px;
+      background: #c347fc;
+      padding: 17px 83px 20px 78px;
+
+      .button {
+        line-height: 17px;
+        letter-spacing: 0;
+        color: #ffffff;
+        font-family: "Nunito Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        text-transform: UPPERCASE;
+      }
+    }
+  }
+
+  .autoWrapper2 {
+    position: relative;
+    width: 651px;
+    height: 656px;
+
+    .unnamed21 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 20px;
+      width: 651px;
+      height: 656px;
+    }
+
+    .veidojamStiprasKoman {
+      position: absolute;
+      top: -121px;
+      left: -671px;
+      width: 1130px;
+      height: 139px;
+      line-height: 67px;
+      letter-spacing: 0;
+      color: #081528;
+      font-family: Poppins, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+      font-size: 60px;
+    }
+  }
+}
