@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { BrandCard } from "@/components/ui/brand-card";
 import { BrandButton } from "@/components/ui/brand-button";
-import { ChevronLeft, ChevronRight, Star, Users, Calendar, MapPin, Phone, Mail, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Star } from "lucide-react";
 import NewsCarousel from "@/components/NewsCarousel";
 import EventsSection from "@/components/EventsSection";
 import NumbersSection from "@/components/NumbersSection";
@@ -108,7 +108,7 @@ export default function Home() {
           
           <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto" role="list" aria-label="Pakalpojumu kategorijas">
             {/* Uzņēmumiem */}
-            <article className="group hover:scale-105 transition-all duration-300 overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-xl focus-within:ring-4 focus-within:ring-purple-300" role="listitem" tabIndex="0">
+            <article className="group hover:scale-105 transition-all duration-300 overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-xl focus-within:ring-4 focus-within:ring-purple-300" role="listitem" tabIndex={0}>
               <div className="relative h-64 overflow-hidden">
                 <Image
                   src="/figma-images/memm2mzf-0f1zba7.png"
@@ -156,7 +156,7 @@ export default function Home() {
             </article>
             
             {/* Skolām */}
-            <article className="group hover:scale-105 transition-all duration-300 overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-xl focus-within:ring-4 focus-within:ring-blue-300" role="listitem" tabIndex="0">
+            <article className="group hover:scale-105 transition-all duration-300 overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-xl focus-within:ring-4 focus-within:ring-blue-300" role="listitem" tabIndex={0}>
               <div className="relative h-64 overflow-hidden">
                 <Image
                   src="/figma-images/memm2mzf-0f1zba7.png"
@@ -205,7 +205,7 @@ export default function Home() {
             </article>
             
             {/* Ģimenēm */}
-            <article className="group hover:scale-105 transition-all duration-300 overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-xl focus-within:ring-4 focus-within:ring-pink-300" role="listitem" tabIndex="0">
+            <article className="group hover:scale-105 transition-all duration-300 overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-xl focus-within:ring-4 focus-within:ring-pink-300" role="listitem" tabIndex={0}>
               <div className="relative h-64 overflow-hidden">
                 <Image
                   src="/figma-images/memm2mzf-0f1zba7.png"
@@ -266,15 +266,15 @@ export default function Home() {
             
             {/* Statistics Grid */}
             <div className="grid md:grid-cols-3 gap-8 mb-16" role="list" aria-label="Papildu statistika">
-              <div className="text-center" role="listitem" tabIndex="0">
+              <div className="text-center" role="listitem" tabIndex={0}>
                 <div className="text-5xl font-bold text-[#d151ff] mb-2" aria-label="100 procenti">100%</div>
                 <div className="text-lg text-gray-600">mobilitāte</div>
               </div>
-              <div className="text-center" role="listitem" tabIndex="0">
+              <div className="text-center" role="listitem" tabIndex={0}>
                 <div className="text-5xl font-bold text-[#d151ff] mb-2" aria-label="115 tūkstoši plus">115 000+</div>
                 <div className="text-lg text-gray-600">pasākumu dalībnieki</div>
               </div>
-              <div className="text-center" role="listitem" tabIndex="0">
+              <div className="text-center" role="listitem" tabIndex={0}>
                 <div className="text-5xl font-bold text-[#d151ff] mb-2" aria-label="500 plus">500+</div>
                 <div className="text-lg text-gray-600">iepriecinātas ģimenes</div>
               </div>
@@ -295,7 +295,7 @@ export default function Home() {
                 <div>
                   <h3 id="testimonial-author" className="text-xl font-bold text-[#081528] mb-2">Anna Linde</h3>
                   <p className="text-gray-600 mb-4">
-                    "Reāls Piedzīvojums organizēja mūsu uzņēmuma gada pasākumu, un tas bija fantastiski! Komanda bija ļoti profesionāla, un visi darbinieki bija sajūsmā par aktivitātēm. Noteikti sadarbosimies arī turpmāk!"
+                    &quot;Reāls Piedzīvojums organizēja mūsu uzņēmuma gada pasākumu, un tas bija fantastiski! Komanda bija ļoti profesionāla, un visi darbinieki bija sajūsmā par aktivitātēm. Noteikti sadarbosimies arī turpmāk!&quot;
                   </p>
                   <div className="flex items-center space-x-1" role="img" aria-label="5 zvaigžņu vērtējums">
                     {[1, 2, 3, 4, 5].map((star) => (
@@ -370,7 +370,7 @@ export default function Home() {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" role="list" aria-label="Pasākuma organizēšanas soļi">
               {/* Step 1 */}
-              <div className="text-center" role="listitem" tabIndex="0" aria-label="1. solis: Izvēlieties pasākumu">
+              <div className="text-center" role="listitem" tabIndex={0} aria-label="1. solis: Izvēlieties pasākumu">
                 <div className="w-16 h-16 bg-[#d151ff] rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">1</span>
                 </div>
@@ -381,7 +381,7 @@ export default function Home() {
               </div>
 
               {/* Step 2 */}
-              <div className="text-center" role="listitem" tabIndex="0" aria-label="2. solis: Konsultācija">
+              <div className="text-center" role="listitem" tabIndex={0} aria-label="2. solis: Konsultācija">
                 <div className="w-16 h-16 bg-[#d151ff] rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">2</span>
                 </div>
@@ -392,7 +392,7 @@ export default function Home() {
               </div>
 
               {/* Step 3 */}
-              <div className="text-center" role="listitem" tabIndex="0" aria-label="3. solis: Plānošana">
+              <div className="text-center" role="listitem" tabIndex={0} aria-label="3. solis: Plānošana">
                 <div className="w-16 h-16 bg-[#d151ff] rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">3</span>
                 </div>
@@ -403,7 +403,7 @@ export default function Home() {
               </div>
 
               {/* Step 4 */}
-              <div className="text-center" role="listitem" tabIndex="0" aria-label="4. solis: Sagatavošana">
+              <div className="text-center" role="listitem" tabIndex={0} aria-label="4. solis: Sagatavošana">
                 <div className="w-16 h-16 bg-[#d151ff] rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">4</span>
                 </div>
@@ -414,7 +414,7 @@ export default function Home() {
               </div>
 
               {/* Step 5 */}
-              <div className="text-center" role="listitem" tabIndex="0" aria-label="5. solis: Pasākuma vadīšana">
+              <div className="text-center" role="listitem" tabIndex={0} aria-label="5. solis: Pasākuma vadīšana">
                 <div className="w-16 h-16 bg-[#d151ff] rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">5</span>
                 </div>
@@ -425,7 +425,7 @@ export default function Home() {
               </div>
 
               {/* Step 6 */}
-              <div className="text-center" role="listitem" tabIndex="0" aria-label="6. solis: Atsauksmes">
+              <div className="text-center" role="listitem" tabIndex={0} aria-label="6. solis: Atsauksmes">
                 <div className="w-16 h-16 bg-[#d151ff] rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">6</span>
                 </div>
@@ -465,7 +465,7 @@ export default function Home() {
             
             <div className="grid lg:grid-cols-3 gap-8" role="list" aria-label="Cenu plāni">
               {/* Standarta Package */}
-              <BrandCard className="group hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-brand-primary/20" role="listitem" tabIndex="0" aria-label="Standarta pakete - 15 eiro par dalībnieku">
+              <BrandCard className="group hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-brand-primary/20" role="listitem" tabIndex={0} aria-label="Standarta pakete - 15 eiro par dalībnieku">
                 <div className="text-center mb-8">
                   <div className="w-16 h-16 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -526,7 +526,7 @@ export default function Home() {
               </BrandCard>
 
               {/* Biznesa Package - Featured */}
-              <BrandCard className="group hover:scale-105 transition-all duration-300 border-2 border-brand-primary shadow-2xl relative overflow-hidden" role="listitem" tabIndex="0" aria-label="Biznesa pakete - 25 eiro par dalībnieku - Populārākais">
+              <BrandCard className="group hover:scale-105 transition-all duration-300 border-2 border-brand-primary shadow-2xl relative overflow-hidden" role="listitem" tabIndex={0} aria-label="Biznesa pakete - 25 eiro par dalībnieku - Populārākais">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
                   <span className="bg-gradient-to-r from-brand-primary to-brand-secondary text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
                     ⭐ Populārākais
@@ -602,7 +602,7 @@ export default function Home() {
               </BrandCard>
 
               {/* VIP Package */}
-              <BrandCard className="group hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-brand-accent/20" role="listitem" tabIndex="0" aria-label="VIP pakete - 35 eiro par dalībnieku">
+              <BrandCard className="group hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-brand-accent/20" role="listitem" tabIndex={0} aria-label="VIP pakete - 35 eiro par dalībnieku">
                 <div className="text-center mb-8">
                   <div className="w-16 h-16 bg-gradient-to-br from-brand-accent to-brand-primary rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -714,7 +714,7 @@ export default function Home() {
                 'Swedbank', 'DNB', 'Kiilto', 'Kreiss', 'LDZ', 'Lindström',
                 'JYSK', 'MT', 'Beaphar', 'Certex', 'Medlex', 'Rimi'
               ].map((company, index) => (
-                <div key={index} className="w-24 h-16 bg-white rounded-lg flex items-center justify-center shadow-sm opacity-70 hover:opacity-100 transition-opacity" role="listitem" tabIndex="0" aria-label={`Klients: ${company}`}>
+                <div key={index} className="w-24 h-16 bg-white rounded-lg flex items-center justify-center shadow-sm opacity-70 hover:opacity-100 transition-opacity" role="listitem" tabIndex={0} aria-label={`Klients: ${company}`}>
                   <span className="text-gray-600 font-medium text-xs">{company}</span>
                 </div>
               ))}
@@ -748,7 +748,7 @@ export default function Home() {
             
             <div className="space-y-6">
               {/* FAQ Item 1 */}
-              <div className="bg-[#fbfbfb] rounded-2xl p-6" role="listitem" tabIndex="0">
+              <div className="bg-[#fbfbfb] rounded-2xl p-6" role="listitem" tabIndex={0}>
                 <h3 className="text-xl font-bold text-[#081528] mb-3">
                   Kādas pasākumu programmas jūs piedāvājat skolām un klasēm?
                 </h3>
@@ -758,7 +758,7 @@ export default function Home() {
               </div>
 
               {/* FAQ Item 2 */}
-              <div className="bg-[#fbfbfb] rounded-2xl p-6" role="listitem" tabIndex="0">
+              <div className="bg-[#fbfbfb] rounded-2xl p-6" role="listitem" tabIndex={0}>
                 <h3 className="text-xl font-bold text-[#081528] mb-3">
                   Kā notiek pasākuma pieteikšana?
                 </h3>
@@ -768,7 +768,7 @@ export default function Home() {
               </div>
 
               {/* FAQ Item 3 */}
-              <div className="bg-[#fbfbfb] rounded-2xl p-6" role="listitem" tabIndex="0">
+              <div className="bg-[#fbfbfb] rounded-2xl p-6" role="listitem" tabIndex={0}>
                 <h3 className="text-xl font-bold text-[#081528] mb-3">
                   Cik ilgā laikā iepriekš jāpiesaka pasākums?
                 </h3>
@@ -778,7 +778,7 @@ export default function Home() {
               </div>
 
               {/* FAQ Item 4 */}
-              <div className="bg-[#fbfbfb] rounded-2xl p-6" role="listitem" tabIndex="0">
+              <div className="bg-[#fbfbfb] rounded-2xl p-6" role="listitem" tabIndex={0}>
                 <h3 className="text-xl font-bold text-[#081528] mb-3">
                   Vai jūs nodrošināt pasākumus jebkurā Latvijas vietā?
                 </h3>
@@ -1036,7 +1036,7 @@ export default function Home() {
                     />
                     <label htmlFor="marketing-consent" className="text-sm text-gray-700 leading-relaxed">
                       Piekrītu saņemt reklāmas e-pastus. Datu apstrāde publicitātes pasākumu, akciju un
-                      citu SIA "Reāls Piedzīvojums" mārketinga paziņojumu nosūtīšanai.
+                      citu SIA &quot;Reāls Piedzīvojums&quot; mārketinga paziņojumu nosūtīšanai.
                     </label>
                   </div>
                   

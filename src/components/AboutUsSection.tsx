@@ -128,9 +128,9 @@ const AboutUsSection: React.FC = () => {
         <div className="mt-16 text-center max-w-4xl mx-auto">
           <div className="bg-gradient-to-r from-[#c347fc]/5 to-[#109afc]/5 rounded-[20px] p-8">
             <blockquote className="text-[20px] leading-[28px] font-['Poppins'] text-[#080808] italic">
-              "Mūsu mērķis ir radīt pasākumus, kas ne tikai izklaidē, bet arī stiprina komandas garu, 
+              &quot;Mūsu mērķis ir radīt pasākumus, kas ne tikai izklaidē, bet arī stiprina komandas garu, 
               veicina sadarbību un rada neaizmirstamas atmiņas. Katrs pasākums ir unikāls piedzīvojums, 
-              kas paliek atmiņā uz mūžu."
+              kas paliek atmiņā uz mūžu.&quot;
             </blockquote>
             
             <div className="mt-6 flex items-center justify-center space-x-4">

@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { BrandButton } from '@/components/ui/brand-button'
-import { BrandCard, BrandCardHeader, BrandCardTitle, BrandCardDescription, BrandCardContent, BrandCardFooter } from '@/components/ui/brand-card'
+import { BrandCard, BrandCardHeader, BrandCardTitle, BrandCardDescription, BrandCardContent } from '@/components/ui/brand-card'
 import { BrandInput } from '@/components/ui/brand-input'
 
 export default function BrandShowcase() {

@@ -1,11 +1,9 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 interface AdventureCardProps {
   id: string;
   title: string;
   description: string;
-  image: string;
   category: string;
   duration: string;
   difficulty: 'Easy' | 'Moderate' | 'Challenging' | 'Extreme';
@@ -17,7 +15,6 @@ export function AdventureCard({
   id,
   title,
   description,
-  image,
   category,
   duration,
   difficulty,

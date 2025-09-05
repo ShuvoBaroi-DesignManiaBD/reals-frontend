@@ -1,16 +1,14 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 
 interface CategoryCardProps {
   title: string;
-  image: string;
   count: number;
   href: string;
 }
 
-function CategoryCard({ title, image, count, href }: CategoryCardProps) {
+function CategoryCard({ title, count, href }: CategoryCardProps) {
   return (
     <Link 
       href={href}
@@ -73,7 +71,6 @@ export function CategorySection() {
             <CategoryCard 
               key={category.id}
               title={category.title}
-              image={category.image}
               count={category.count}
               href={`/category/${category.slug}`}
             />

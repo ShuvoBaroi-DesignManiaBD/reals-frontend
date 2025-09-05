@@ -73,9 +73,9 @@ const NewsCarousel: React.FC<NewsCarouselProps> = ({ newsItems = defaultNewsItem
       role="region"
     >
       <div className="mx-auto px-4">
-        <div className="flex items-start justify-between gap-8 lg:gap-16">
+        <div className="flex items-start justify-between gap-4 lg:gap-16">
           {/* Left Content */}
-          <div className="flex flex-col items-start flex-shrink-0 mt-3">
+          <div className="flex flex-col items-start mt-3 w-3/8">
             {/* AKTUALITĀTES Title */}
             <h2 
               id="news-carousel-heading"
@@ -96,7 +96,7 @@ const NewsCarousel: React.FC<NewsCarouselProps> = ({ newsItems = defaultNewsItem
             
             {/* Description */}
             <p className="text-[18px] leading-[25px] text-black font-['Poppins'] mb-[68px]">
-              "Reāls Piedzīvojums" draudzības dāvanu!
+              Saņem savu &quot;Reāls Piedzīvojums&quot; draudzības dāvanu!
             </p>
             
             {/* Button */}
@@ -110,13 +110,13 @@ const NewsCarousel: React.FC<NewsCarouselProps> = ({ newsItems = defaultNewsItem
             </button>
             
             {/* Clients Text */}
-            <p className="absolute top-[265px] left-[118px] w-[249px] h-[27px] text-right text-[22px] leading-[31px] text-black font-['Poppins']">
+            {/* <p className="absolute top-[265px] left-[118px] w-[249px] h-[27px] text-right text-[22px] leading-[31px] text-black font-['Poppins']">
               klienti jau saņēmuši
-            </p>
+            </p> */}
           </div>
           
           {/* Right Content - Carousel */}
-          <div className="flex flex-col items-start flex-grow">
+          <div className="flex flex-col items-start flex-grow w-5/8">
             {/* Image Carousel Container */}
             <div className="relative w-full h-[455px] overflow-hidden rounded-lg">
               {/* Navigation Buttons - Styled to match Figma design */}

@@ -99,7 +99,7 @@ export function TestimonialsSection() {
                 </div>
                 
                 <blockquote className="text-gray-700 dark:text-gray-300 italic mb-4">
-                  "{testimonials[activeIndex].quote}"
+                  &quot;{testimonials[activeIndex].quote}&quot;
                 </blockquote>
                 
                 <div>
