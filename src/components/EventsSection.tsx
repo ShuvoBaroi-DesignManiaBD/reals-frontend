@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import SectionCTA from "./SectionCTA";
 
 // Event data structure with categories
 interface Event {
@@ -312,30 +313,12 @@ const EventsSection: React.FC = () => {
         </div>
 
         {/* Call to action section */}
-        <div className="flex items-start justify-between">
-          <div className="flex items-start">
-            <div className="w-[35px] h-[35px] flex-shrink-0">
-              <Image
-                src={"icons/Vector-15.svg"}
-                width={35}
-                height={35}
-                alt="call-to-action-icon"
-              ></Image>
-            </div>
-            <div className="ml-[50px]">
-              <p className="w-[620px] text-[33px] leading-[37px] tracking-[0.66px] text-black font-['Poppins'] mb-[46px]">
-                Laiks piedzīvojumam!
-                <br />
-                Izvēlies savu programmu vai ļauj mums to radīt kopā ar Tevi.
-              </p>
-            </div>
-          </div>
-          <div className="mt-[46px]">
-            <button className="text-[15px] font-medium text-white font-['Nunito_Sans'] uppercase bg-[#c347fc] hover:bg-[#b83ee0] transition-colors duration-300 rounded-[5px] px-[48px] py-[18px] focus:ring-4 focus:ring-purple-300 focus:outline-none">
-              pieteikt pasākumu
-            </button>
-          </div>
-        </div>
+        <SectionCTA
+          iconType="lightPurple"
+          title="Laiks piedzīvojumam!"
+          description="Izvēlies savu programmu vai ļauj mums to radīt kopā ar Tevi."
+          buttonText="pieteikt pasākumu"
+        />
       </div>
     </section>
   );

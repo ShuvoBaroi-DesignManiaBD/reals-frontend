@@ -25,7 +25,7 @@ const Component = () => {
         </div>
       </div>
       <div className={styles.autoWrapper2}>
-        <img src="../image/mf57mjzb-ymvvhh1.png" className={styles.unnamed21} />
+        <img src="../image/mf6j7723-7z7msx9.png" className={styles.sandijsKrasti} />
         <p className={styles.veidojamStiprasKoman}>
           Veidojam stipras komandas un ražojam laimi!
         </p>

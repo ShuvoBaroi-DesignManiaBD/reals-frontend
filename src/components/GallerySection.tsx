@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Play, X, ArrowRight } from 'lucide-react';
+import SectionCTA from './SectionCTA';
 
 interface MediaItem {
   id: number;
@@ -95,7 +96,7 @@ const GallerySection: React.FC = () => {
 
   return (
     <section className="w-full bg-white py-16">
-      <div className="mx-auto text-center">
+      <div className="max-w-screen-xl mx-auto text-center">
         {/* Section Header */}
         <h2 
           className="font-['Poppins'] text-[60px] leading-[67px] text-black text-center"
@@ -118,7 +119,7 @@ const GallerySection: React.FC = () => {
 
         {/* Responsive Gallery Grid */}
         <div 
-          className="max-w-screen-xl mx-auto px-4"
+          className="mx-auto px-4"
           style={{
             margin: '60px auto 0',
           }}
@@ -178,6 +179,13 @@ const GallerySection: React.FC = () => {
             ))}
           </div>
         </div>
+        {/* Call to action section */}
+        <SectionCTA
+          iconType="skyBlue"
+          title="Laiks piedzīvojumam!"
+          description="Izvēlies savu programmu vai ļauj mums to radīt kopā ar Tevi."
+          buttonText="pieteikt pasākumu"
+        />
       </div>
 
       {/* Modal */}

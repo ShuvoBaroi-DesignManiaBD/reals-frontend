@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const AboutUsSection: React.FC = () => {
   return (
-    <section className="w-full py-16 bg-white">
+    <section className="w-full pb-20 bg-white">
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Text Content */}
@@ -53,12 +53,12 @@ const AboutUsSection: React.FC = () => {
           
           {/* Image Content */}
           <div className="relative">
-            <div className="relative aspect-[4/3] rounded-[20px] overflow-hidden">
+            <div className="relative aspect-[4/3.5] rounded-[20px] overflow-hidden">
               <Image
-                src="/images/about/team-leader.jpg"
+                src="/images/team-leader.png"
                 alt="Reāls Piedzīvojums team leader"
                 fill
-                className="object-cover"
+                className="object-contain w-auto h-[700px]"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               

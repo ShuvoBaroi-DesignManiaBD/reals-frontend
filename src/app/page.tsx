@@ -8,6 +8,7 @@ import EventsSection from "@/components/EventsSection";
 import NumbersSection from "@/components/NumbersSection";
 import GallerySection from "@/components/GallerySection";
 import AboutUsSection from "@/components/AboutUsSection";
+import EventStages from "@/components/EventStages";
 
 export default function Home() {
   return (
@@ -90,6 +91,7 @@ export default function Home() {
       {/* About Us Section */}
       <AboutUsSection />
 
+      <EventStages />
       {/* Target Audience Sections */}
       <section 
         className="py-24 bg-gradient-to-br from-gray-50 to-white"

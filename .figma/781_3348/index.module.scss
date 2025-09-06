@@ -1,0 +1,250 @@
+* {
+  box-sizing: border-box;
+}
+
+.eVentstagesSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 1317px;
+  height: 569px;
+
+  .pasKumaOrganizAnasPo {
+    margin: 0px 0px 0px 85px;
+    width: 1151px;
+    text-align: center;
+    line-height: 67px;
+    letter-spacing: 0;
+    color: #000000;
+    font-family: Poppins, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+    font-size: 60px;
+  }
+
+  .piedzVojumsSKasJauNo {
+    margin: 25px 0px 0px 123px;
+    width: 1075px;
+    text-align: center;
+    line-height: 25px;
+    letter-spacing: 0;
+    color: #000000;
+    font-family: Poppins, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+  }
+
+  .autoWrapper {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    justify-content: space-between;
+    margin-top: 47px;
+    padding-right: 0;
+    padding-left: 0;
+
+    .solisNr1 {
+      line-height: 26px;
+      letter-spacing: -0.2px;
+      color: #ffffff;
+      font-family: Poppins, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+      font-size: 18px;
+    }
+
+    .rectangle212 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border-radius: 20px;
+      box-shadow: 7px 6px 33px 13px #f2f3f2;
+      padding: 26px 27px 109px 18px;
+      background-image: linear-gradient(
+        270.11deg,
+        #461fc5 0.11%,
+        #8112b3 99.89%
+      );
+
+      .izvLiesPasKumu {
+        margin: 9px 0px 0px;
+        width: 157px;
+        line-height: 30px;
+        letter-spacing: 0;
+        color: #ffffff;
+        font-family: Poppins, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+        font-size: 25px;
+      }
+    }
+
+    .rectangle2122 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border-radius: 20px;
+      box-shadow: 7px 6px 33px 13px #f2f3f2;
+      padding: 26px 8px 79px 18px;
+      background-image: linear-gradient(
+        269.79deg,
+        #a006d8 0.21%,
+        #461fc5 99.79%
+      );
+
+      .saEmProgrammasPiedVj {
+        margin: 9px 0px 0px;
+        width: 177px;
+        line-height: 30px;
+        letter-spacing: 0;
+        color: #ffffff;
+        font-family: Poppins, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+        font-size: 25px;
+      }
+    }
+
+    .rectangle2123 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border-radius: 20px;
+      box-shadow: 7px 6px 33px 13px #f2f3f2;
+      padding: 26px 1px 79px 18px;
+      background-image: linear-gradient(
+        269.98deg,
+        #d151ff 0.02%,
+        #a006d8 99.98%
+      );
+
+      .kopGiPielGojamProgra {
+        margin: 9px 0px 0px;
+        width: 184px;
+        line-height: 30px;
+        letter-spacing: 0;
+        color: #ffffff;
+        font-family: Poppins, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+        font-size: 25px;
+      }
+    }
+
+    .rectangle2124 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border-radius: 20px;
+      box-shadow: 7px 6px 33px 13px #f2f3f2;
+      padding: 26px 8px 109px 18px;
+      background-image: linear-gradient(270.21deg, #109afc 0.2%, #d151ff 99.8%);
+
+      .programmasSaskaOAna {
+        margin: 9px 0px 0px;
+        width: 176px;
+        line-height: 30px;
+        letter-spacing: 0;
+        color: #ffffff;
+        font-family: Poppins, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+        font-size: 25px;
+      }
+    }
+
+    .rectangle2125 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border-radius: 20px;
+      box-shadow: 7px 6px 33px 13px #f2f3f2;
+      padding: 26px 5px 109px 18px;
+      background-image: linear-gradient(
+        270.45deg,
+        #3dc0df 0.43%,
+        #109afc 99.57%
+      );
+
+      .pasKumsNotiek {
+        margin: 9px 0px 0px;
+        width: 180px;
+        line-height: 30px;
+        letter-spacing: 0;
+        color: #ffffff;
+        font-family: Poppins, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+        font-size: 25px;
+      }
+    }
+
+    .rectangle2126 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border-radius: 20px;
+      box-shadow: 7px 6px 33px 13px #f2f3f2;
+      padding: 26px 10px 109px 18px;
+      background-image: linear-gradient(
+        270.07deg,
+        #c347fc 0.07%,
+        #3dc0df 99.93%
+      );
+
+      .daliesArAtsauksmi {
+        margin: 9px 0px 0px;
+        width: 175px;
+        line-height: 30px;
+        letter-spacing: 0;
+        color: #ffffff;
+        font-family: Poppins, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+        font-size: 25px;
+      }
+    }
+  }
+
+  .autoWrapper2 {
+    display: flex;
+    align-items: flex-start;
+    align-self: stretch;
+    margin-top: 94px;
+    padding-right: 0;
+    padding-left: 7px;
+
+    .vector {
+      width: 35px;
+      height: 35px;
+    }
+
+    .jaEsiJauPiedalJiesMs3 {
+      margin: 0px 0px 0px 74px;
+      width: 761px;
+      line-height: 28px;
+      letter-spacing: 0.5px;
+      color: #000000;
+      font-size: 25px;
+
+      .jaEsiJauPiedalJiesMs {
+        line-height: 28px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        font-family: Poppins, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+        font-size: 25px;
+      }
+
+      .jaEsiJauPiedalJiesMs2 {
+        line-height: 28px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        font-family: Poppins, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+        font-size: 25px;
+        font-weight: 700;
+      }
+    }
+
+    .rectangle193 {
+      display: flex;
+      align-items: flex-start;
+      margin-left: 116px;
+      border-radius: 5px;
+      background: #c347fc;
+      padding: 17px 87px 20px 82px;
+
+      .button {
+        line-height: 17px;
+        letter-spacing: 0;
+        color: #ffffff;
+        font-family: "Nunito Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        text-transform: UPPERCASE;
+      }
+    }
+  }
+}
