@@ -10,8 +10,8 @@ import GallerySection from "@/components/GallerySection";
 import AboutUsSection from "@/components/AboutUsSection";
 import EventStages from "@/components/EventStages";
 import Testimonials from "@/components/Testimonials";
-import ButtonShowcase from "@/components/ButtonShowcase";
 import PricingSection from "@/components/PricingSection";
+import BenefitsAndBonusesSection from "@/components/BenefitsAndBonusesSection";
 
 export default function Home() {
   return (
@@ -102,6 +102,9 @@ export default function Home() {
 
       {/* Pricing Section - Figma Design Implementation */}
       <PricingSection />
+
+      {/* Benefits and Bonuses Section */}
+      <BenefitsAndBonusesSection />
       
       <section 
         className="py-24 bg-gradient-to-br from-gray-50 to-white"

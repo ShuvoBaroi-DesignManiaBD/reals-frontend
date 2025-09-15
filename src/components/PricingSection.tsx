@@ -3,6 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { SkolamFeatureItem } from "./SkolamFeatureItem";
+import { SkolamPricingTier } from "./SkolamPricingTier";
 
 interface PricingFeature {
   text: string;
@@ -17,6 +19,18 @@ interface PricingTier {
   highlighted?: boolean;
   badge?: string;
   color: string;
+}
+
+interface SkolamPricingTier {
+  participants: string;
+  price: string;
+  priceNote: string;
+  additionalNote?: string;
+}
+
+interface SkolamFeature {
+  text: string;
+  icon: string;
 }
 
 const pricingDataByCategory = {
@@ -268,6 +282,49 @@ const pricingDataByCategory = {
   ],
 };
 
+// Skolam pricing data
+const skolamPricingData: SkolamPricingTier[] = [
+  {
+    participants: "20",
+    price: "no 34 EUR",
+    priceNote: "par dalībnieku"
+  },
+  {
+    participants: "30",
+    price: "no 30 EUR",
+    priceNote: "par dalībnieku"
+  },
+  {
+    participants: "40",
+    price: "no 25 EUR",
+    priceNote: "par dalībnieku"
+  },
+  {
+    participants: "50",
+    price: "no 23.50 EUR",
+    priceNote: "par dalībnieku"
+  },
+  {
+    participants: "100+",
+    price: "no 22 EUR",
+    priceNote: "par dalībnieku",
+    additionalNote: "Izbraucam uz jebkuru Latvijas vietu, ja tiek segti transporta izdevumi!"
+  }
+];
+
+// Skolam features data
+const skolamFeatures: SkolamFeature[] = [
+  { text: "Pasākuma vadītājs", icon: "/icons/Group 12619.svg" },
+  { text: "Tehniskā komanda", icon: "/icons/Group 12619.svg" },
+  { text: "Diplomi / Sertifikāti", icon: "/icons/Group 12619.svg" },
+  { text: "Apskaņošana", icon: "/icons/Group 12619.svg" },
+  { text: "Pasākuma programma", icon: "/icons/Group 12619.svg" },
+  { text: "Pasākuma vietas organizēšana", icon: "/icons/Group 12619.svg" },
+  { text: "Kopīgs klases kauss", icon: "/icons/Group 12619.svg" },
+  { text: "Atklāšanas ceremonija", icon: "/icons/Group 12619.svg" },
+  { text: "Noslēguma ceremonija", icon: "/icons/Group 12619.svg" }
+];
+
 const additionalCosts = [
   { text: "x2 Kvests, laivu brauciens", multiplier: "x2" },
   { text: "x3 Autokvests, Jahtu, zemūdens kvests", multiplier: "x3" },
@@ -414,7 +471,7 @@ const PricingSection: React.FC = () => {
         <TabsContent value="skolam" className="mt-0">
           <div className="w-5/6 mx-auto grid grid-cols-5 justify-between gap-[39px] mb-[45px]">
             {/* Left Panel - Features Included */}
-            <div className="col-span-2 self-stretch flex flex-col bg-[#fffffff2] rounded-[20px] shadow-[1px_4px_28px_9px_#25a0dd33] p-10 min-w-[328px]">
+            <div className="col-span-2 self-stretch border-t border-secondary flex flex-col bg-[#fffffff2] rounded-[20px] shadow-[1px_4px_28px_9px_#25a0dd33] p-10 min-w-[328px]">
               <h3 className="text-[44px] leading-[49px] tracking-[0.88px] text-[#109AFC] font-['Poppins'] mb-[8px]">
                 Pasākumā
               </h3>
@@ -424,224 +481,27 @@ const PricingSection: React.FC = () => {
 
               {/* Features List */}
               <div className="space-y-[12px]">
-                <div className="flex items-center gap-[21px]">
-                  <Image
-                    src="/icons/Group 12619.svg"
-                    alt="Included"
-                    width={21}
-                    height={21}
-                    className="flex-shrink-0"
+                {skolamFeatures.map((feature, index) => (
+                  <SkolamFeatureItem
+                    key={index}
+                    text={feature.text}
+                    icon={feature.icon}
                   />
-                  <span className="text-[14px] leading-[20px] text-black font-['Poppins']">
-                    Pasākuma vadītājs
-                  </span>
-                </div>
-                <div className="flex items-center gap-[21px]">
-                  <Image
-                    src="/icons/mfjhpexy-o6mcrxc.svg"
-                    alt="Included"
-                    width={22}
-                    height={21}
-                    className="flex-shrink-0"
-                  />
-                  <span className="text-[14px] leading-[20px] text-black font-['Poppins']">
-                    Tehniskā komanda
-                  </span>
-                </div>
-                <div className="flex items-center gap-[21px]">
-                  <Image
-                    src="/icons/mfjhpexy-qrg7n6o.svg"
-                    alt="Included"
-                    width={22}
-                    height={22}
-                    className="flex-shrink-0"
-                  />
-                  <span className="text-[14px] leading-[20px] text-black font-['Poppins']">
-                    Diplomi / Sertifikāti
-                  </span>
-                </div>
-                <div className="flex items-center gap-[21px]">
-                  <Image
-                    src="/icons/mfjhpexy-phxtiqh.svg"
-                    alt="Included"
-                    width={22}
-                    height={21}
-                    className="flex-shrink-0"
-                  />
-                  <span className="text-[14px] leading-[20px] text-black font-['Poppins']">
-                    Apskaņošana
-                  </span>
-                </div>
-                <div className="flex items-center gap-[21px]">
-                  <Image
-                    src="/icons/mfjhpexy-t3ilri0.svg"
-                    alt="Included"
-                    width={22}
-                    height={21}
-                    className="flex-shrink-0"
-                  />
-                  <span className="text-[14px] leading-[20px] text-black font-['Poppins']">
-                    Pasākuma programma
-                  </span>
-                </div>
-                <div className="flex items-center gap-[21px]">
-                  <Image
-                    src="/icons/mfjhpexy-o6mcrxc.svg"
-                    alt="Included"
-                    width={22}
-                    height={21}
-                    className="flex-shrink-0"
-                  />
-                  <span className="text-[14px] leading-[20px] text-black font-['Poppins']">
-                    Pasākuma vietas organizēšana
-                  </span>
-                </div>
-                <div className="flex items-center gap-[21px]">
-                  <Image
-                    src="/icons/mfjhpexy-qrg7n6o.svg"
-                    alt="Included"
-                    width={22}
-                    height={22}
-                    className="flex-shrink-0"
-                  />
-                  <span className="text-[14px] leading-[20px] text-black font-['Poppins']">
-                    Kopīgs klases kauss
-                  </span>
-                </div>
-                <div className="flex items-center gap-[21px]">
-                  <Image
-                    src="/icons/mfjhpexy-t3ilri0.svg"
-                    alt="Included"
-                    width={22}
-                    height={21}
-                    className="flex-shrink-0"
-                  />
-                  <span className="text-[14px] leading-[9px] text-black font-['Poppins']">
-                    Atklāšanas ceremonija
-                  </span>
-                </div>
-                <div className="flex items-center gap-[21px]">
-                  <Image
-                    src="/icons/mfjhpexy-o6mcrxc.svg"
-                    alt="Included"
-                    width={22}
-                    height={21}
-                    className="flex-shrink-0"
-                  />
-                  <span className="text-[14px] leading-[9px] text-black font-['Poppins']">
-                    Noslēguma ceremonija
-                  </span>
-                </div>
+                ))}
               </div>
             </div>
 
             {/* Right Panel - Pricing Tiers */}
             <div className="col-span-3 self-stretch flex flex-col gap-5">
-              {/* 20 participants */}
-              <div className="flex items-center justify-start gap-40 bg-[#fffffff2] rounded-[20px] shadow-[1px_4px_28px_9px_#25a0dd33] p-6">
-                <div className="flex flex-col">
-                  <p className="text-[44px] leading-[49px] tracking-[0.88px] text-[#109AFC] font-['Poppins']">
-                    20
-                  </p>
-                  <p className="text-[14px] leading-[15px] text-black font-light uppercase font-['Poppins'] mt-[1px]">
-                    dalībnieki
-                  </p>
-                </div>
-                <div className="flex flex-col">
-                  <p className="text-[35px] leading-[39px] tracking-[0.7px] text-[#109AFC] font-['Poppins']">
-                    no 34 EUR
-                  </p>
-                  <p className="text-[14px] leading-[15px] text-black font-light font-['Poppins'] mt-[9px]">
-                    par dalībnieku
-                  </p>
-                </div>
-              </div>
-
-              {/* 30 participants */}
-              <div className="flex items-center justify-start gap-40 bg-[#fffffff2] rounded-[20px] shadow-[1px_4px_28px_9px_#25a0dd33] p-6">
-                <div className="flex flex-col">
-                  <p className="text-[44px] leading-[49px] tracking-[0.88px] text-[#109AFC] font-['Poppins']">
-                    30
-                  </p>
-                  <p className="text-[14px] leading-[15px] text-black font-light uppercase font-['Poppins'] mt-[1px]">
-                    dalībnieki
-                  </p>
-                </div>
-                <div className="flex flex-col">
-                  <p className="text-[35px] leading-[39px] tracking-[0.7px] text-[#109AFC] font-['Poppins']">
-                    no 30 EUR
-                  </p>
-                  <p className="text-[14px] leading-[15px] text-black font-light font-['Poppins'] mt-[9px]">
-                    par dalībnieku
-                  </p>
-                </div>
-              </div>
-
-              {/* 40 participants */}
-              <div className="flex items-center justify-start gap-40 bg-[#fffffff2] rounded-[20px] shadow-[1px_4px_28px_9px_#25a0dd33] p-6">
-                <div className="flex flex-col">
-                  <p className="text-[44px] leading-[49px] tracking-[0.88px] text-[#109AFC] font-['Poppins']">
-                    40
-                  </p>
-                  <p className="text-[14px] leading-[15px] text-black font-light uppercase font-['Poppins'] mt-[1px]">
-                    dalībnieki
-                  </p>
-                </div>
-                <div className="flex flex-col justify-center">
-                  <p className="text-[35px] leading-[39px] tracking-[0.7px] text-[#109AFC] font-['Poppins']">
-                    no 25 EUR
-                  </p>
-                  <p className="text-[14px] leading-[15px] text-black font-light font-['Poppins'] mt-[9px]">
-                    par dalībnieku
-                  </p>
-                </div>
-              </div>
-
-              {/* 50 participants */}
-              <div className="flex items-center justify-start gap-40 bg-[#fffffff2] rounded-[20px] shadow-[1px_4px_28px_9px_#25a0dd33] p-6">
-                <div className="flex flex-col">
-                  <p className="text-[44px] leading-[49px] tracking-[0.88px] text-[#109AFC] font-['Poppins']">
-                    50
-                  </p>
-                  <p className="text-[14px] leading-[15px] text-black font-light uppercase font-['Poppins'] mt-[1px]">
-                    dalībnieki
-                  </p>
-                </div>
-                <div className="flex flex-col">
-                  <p className="text-[35px] leading-[39px] tracking-[0.7px] text-[#109AFC] font-['Poppins']">
-                    no 23.50 EUR
-                  </p>
-                  <p className="text-[14px] leading-[15px] text-black font-light font-['Poppins'] mt-[9px]">
-                    par dalībnieku
-                  </p>
-                </div>
-              </div>
-
-              {/* 100+ participants */}
-              <div className="bg-[#fffffff2] rounded-[20px] shadow-[1px_4px_28px_9px_#25a0dd33] p-6 ">
-                <div className="w-full flex justify-start gap-30">
-                  <div className="flex flex-col items-start justify-between">
-                    <p className="text-[44px] leading-[49px] tracking-[0.88px] text-[#109AFC] font-['Poppins']">
-                      100+
-                    </p>
-                    <p className="text-[14px] leading-[15px] text-black font-light uppercase font-['Poppins']">
-                      dalībnieki
-                    </p>
-                  </div>
-                  <div className="flex flex-col items-start justify-between">
-                    <p className="text-[35px] leading-[39px] tracking-[0.7px] text-[#109AFC] font-['Poppins']">
-                      no 22 EUR
-                    </p>
-                    <p className="text-[14px] leading-[15px] text-black font-light font-['Poppins']">
-                      par dalībnieku
-                    </p>
-                  </div>
-                </div>
-                <p className="text-[11px] leading-[15px] text-[#949292] font-light font-['Poppins'] mt-[8px] w-[393px]">
-                  Izbraucam uz jebkuru Latvijas vietu, ja tiek segti transporta
-                  izdevumi!
-                </p>
-              </div>
+              {skolamPricingData.map((tier, index) => (
+                <SkolamPricingTier
+                  key={index}
+                  participants={tier.participants}
+                  price={tier.price}
+                  priceNote={tier.priceNote}
+                  additionalNote={tier.additionalNote}
+                />
+              ))}
             </div>
           </div>
         </TabsContent>
