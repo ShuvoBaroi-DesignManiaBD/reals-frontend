@@ -9,10 +9,13 @@ import NumbersSection from "@/components/NumbersSection";
 import GallerySection from "@/components/GallerySection";
 import AboutUsSection from "@/components/AboutUsSection";
 import EventStages from "@/components/EventStages";
+import Testimonials from "@/components/Testimonials";
+import ButtonShowcase from "@/components/ButtonShowcase";
+import PricingSection from "@/components/PricingSection";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#fbfbfb]" role="main">
+    <main className="min-h-screen" role="main">
       
       {/* Hero Section - Figma Design Implementation */}
       <section 
@@ -92,7 +95,14 @@ export default function Home() {
       <AboutUsSection />
 
       <EventStages />
+      {/* Testimonials Section */}
+
+      <Testimonials />
       {/* Target Audience Sections */}
+
+      {/* Pricing Section - Figma Design Implementation */}
+      <PricingSection />
+      
       <section 
         className="py-24 bg-gradient-to-br from-gray-50 to-white"
         aria-labelledby="services-heading"
@@ -436,267 +446,6 @@ export default function Home() {
                   Saņemam jūsu atsauksmes un uzlabojam mūsu pakalpojumus.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Tables Section */}
-      <section className="py-24 bg-gradient-to-br from-brand-primary/5 via-brand-secondary/5 to-brand-accent/5 relative overflow-hidden" aria-labelledby="pricing-heading">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-brand-primary rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-40 h-40 bg-brand-secondary rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-brand-accent rounded-full blur-3xl"></div>
-        </div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-20">
-              <div className="inline-flex items-center px-4 py-2 bg-brand-primary/10 rounded-full text-brand-primary font-medium text-sm mb-6">
-                <span className="w-2 h-2 bg-brand-primary rounded-full mr-2"></span>
-                Cenu plāni
-              </div>
-              <h2 id="pricing-heading" className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-accent bg-clip-text text-transparent mb-6">
-                Mūsu pakalpojumu cenas
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Izvēlieties sev piemērotāko paketi un radiet neaizmirstamus piedzīvojumus
-              </p>
-            </div>
-            
-            <div className="grid lg:grid-cols-3 gap-8" role="list" aria-label="Cenu plāni">
-              {/* Standarta Package */}
-              <BrandCard className="group hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-brand-primary/20" role="listitem" tabIndex={0} aria-label="Standarta pakete - 15 eiro par dalībnieku">
-                <div className="text-center mb-8">
-                  <div className="w-16 h-16 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Standarta</h3>
-                  <div className="mb-6">
-                    <span className="text-5xl font-bold bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent">€15</span>
-                    <span className="text-gray-600 font-medium">/dalībnieks</span>
-                  </div>
-                </div>
-                <ul className="space-y-4 mb-10">
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">Pasākuma vadītājs</span>
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">Tehniskā komanda</span>
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">Balvas dalībniekiem</span>
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">Apskaņošana</span>
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">Pasākuma programma</span>
-                  </li>
-                </ul>
-                <BrandButton variant="outline" className="w-full group-hover:bg-brand-primary group-hover:text-white transition-all duration-300" aria-label="Izvēlēties Standarta paketi">
-                  Izvēlēties
-                </BrandButton>
-              </BrandCard>
-
-              {/* Biznesa Package - Featured */}
-              <BrandCard className="group hover:scale-105 transition-all duration-300 border-2 border-brand-primary shadow-2xl relative overflow-hidden" role="listitem" tabIndex={0} aria-label="Biznesa pakete - 25 eiro par dalībnieku - Populārākais">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                  <span className="bg-gradient-to-r from-brand-primary to-brand-secondary text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
-                    ⭐ Populārākais
-                  </span>
-                </div>
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-brand-primary/10 to-transparent rounded-bl-full"></div>
-                
-                <div className="text-center mb-8 pt-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-brand-secondary to-brand-accent rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Biznesa</h3>
-                  <div className="mb-6">
-                    <span className="text-5xl font-bold bg-gradient-to-r from-brand-secondary to-brand-accent bg-clip-text text-transparent">€25</span>
-                    <span className="text-gray-600 font-medium">/dalībnieks</span>
-                  </div>
-                </div>
-                <ul className="space-y-4 mb-10">
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">Viss no Standarta paketes</span>
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">Pasākuma vietas organizēšana</span>
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">Kausi</span>
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">Medaļas</span>
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">Priekšnesumi/šovi</span>
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">Atklāšanas ceremonija</span>
-                  </li>
-                </ul>
-                <BrandButton className="w-full bg-gradient-to-r from-brand-primary to-brand-secondary hover:from-brand-primary/90 hover:to-brand-secondary/90 text-white font-bold" aria-label="Izvēlēties Biznesa paketi">
-                  Izvēlēties
-                </BrandButton>
-              </BrandCard>
-
-              {/* VIP Package */}
-              <BrandCard className="group hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-brand-accent/20" role="listitem" tabIndex={0} aria-label="VIP pakete - 35 eiro par dalībnieku">
-                <div className="text-center mb-8">
-                  <div className="w-16 h-16 bg-gradient-to-br from-brand-accent to-brand-primary rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">VIP</h3>
-                  <div className="mb-6">
-                    <span className="text-5xl font-bold bg-gradient-to-r from-brand-accent to-brand-primary bg-clip-text text-transparent">€35</span>
-                    <span className="text-gray-600 font-medium">/dalībnieks</span>
-                  </div>
-                </div>
-                <ul className="space-y-4 mb-10">
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">Viss no Biznesa paketes</span>
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">Noslēgšanas ceremonija</span>
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">Apgaismojums</span>
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">DJ vai mūziķis</span>
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">Dzīvā mūzika</span>
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">Diskotēka</span>
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">Dekorācijas</span>
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                      <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">Unikālas balvas</span>
-                  </li>
-                </ul>
-                <BrandButton variant="outline" className="w-full group-hover:bg-brand-accent group-hover:text-white transition-all duration-300" aria-label="Izvēlēties VIP paketi">
-                  Izvēlēties
-                </BrandButton>
-              </BrandCard>
-            </div>
-
-            {/* CTA Section */}
-            <div className="text-center mt-16">
-              <p className="text-lg text-gray-600 mb-6">
-                Nepieciešama konsultācija? Sazinājieties ar mums!
-              </p>
-              <Button className="bg-[#d151ff] hover:bg-[#b83ee0] text-white px-8 py-3" aria-label="Saņemt bezmaksas konsultāciju">
-                Saņemt konsultāciju
-              </Button>
             </div>
           </div>
         </div>

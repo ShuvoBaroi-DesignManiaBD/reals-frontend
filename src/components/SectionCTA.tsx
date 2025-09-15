@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 interface ctaProps{
     iconType: 'darkPurple' | 'lightPurple' | 'skyBlue';
-    title: string;
-    description: string;
+    title?: string;
+    description?: string;
     buttonText: string;
 } 
 const SectionCTA = ({iconType, title, description, buttonText}: ctaProps) => {
@@ -37,15 +37,19 @@ const SectionCTA = ({iconType, title, description, buttonText}: ctaProps) => {
                 )}
             </div>
             <div className="ml-[50px]">
-              <p className="w-[620px] text-[33px] leading-[37px] tracking-[0.66px] text-black font-['Poppins'] mb-[46px] text-start">
-                {title}
-                <br />
-                {description}
-              </p>
+              <div className="w-[620px] text-[33px] leading-[37px] tracking-[0.66px] text-black font-['Poppins'] mb-[46px] text-start">
+                {title && (
+                  <span dangerouslySetInnerHTML={{ __html: title }} />
+                )}
+                {title && description && <br />}
+                {description && (
+                  <span dangerouslySetInnerHTML={{ __html: description }} />
+                )}
+              </div>
             </div>
           </div>
           <div className="mt-[46px]">
-            <button className="text-[15px] font-medium text-white font-['Nunito_Sans'] uppercase bg-[#c347fc] hover:bg-[#b83ee0] transition-colors duration-300 rounded-[5px] px-[48px] py-[18px] focus:ring-4 focus:ring-purple-300 focus:outline-none">
+            <button className="CTA-btn">
               {buttonText}
             </button>
           </div>
