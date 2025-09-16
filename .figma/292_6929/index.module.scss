@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+}
+
+.rectangle230 {
+  display: flex;
+  align-items: flex-start;
+  border-radius: 50px;
+  background: #ffffff;
+  padding: 120px 81px 115px;
+  width: 1440px;
+  height: 831px;
+
+  .ldz {
+    margin-top: 265px;
+    width: 204px;
+    height: 83px;
+  }
+
+  .autoWrapper4 {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    margin-left: 30px;
+
+    .swedbank {
+      position: absolute;
+      top: 49px;
+      left: -197px;
+      width: 267px;
+      height: 267px;
+    }
+
+    .autoWrapper3 {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+      align-self: stretch;
+      padding-right: 0;
+      padding-left: 0;
+
+      .mumsUzticS {
+        margin: 0px 0px 0px 109px;
+        width: 580px;
+        text-align: center;
+        line-height: 49px;
+        letter-spacing: 0.88px;
+        color: #121212;
+        font-family: Poppins, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+        font-size: 44px;
+      }
+
+      .autoWrapper2 {
+        display: flex;
+        position: relative;
+        align-items: flex-start;
+        align-self: stretch;
+        margin-top: 95px;
+        padding-right: 0;
+        padding-left: 0;
+
+        .autoWrapper {
+          position: relative;
+          margin-top: 73px;
+          width: 179px;
+          height: 179px;
+
+          .dNbLogoSvg {
+            position: absolute;
+            top: -73px;
+            right: -90px;
+            width: 121px;
+            height: 83px;
+          }
+
+          .lau {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 179px;
+            height: 179px;
+          }
+        }
+
+        .medlex {
+          margin-top: 254px;
+          margin-left: -70px;
+          width: 324px;
+          height: 83px;
+        }
+
+        .lindstromLogoRgb1366 {
+          margin-top: 130px;
+          margin-left: -224px;
+          width: 305px;
+          height: 65px;
+        }
+
+        .kiiltoLogo20181720X7 {
+          margin-left: -175px;
+          width: 83px;
+          height: 83px;
+        }
+
+        .kreissLogo {
+          margin-left: 70px;
+          width: 231px;
+          height: 83px;
+        }
+
+        .certexPng {
+          margin-top: 232px;
+          margin-left: -209px;
+          width: 254px;
+          height: 127px;
+        }
+
+        .logoJyskJpg {
+          margin-top: 121px;
+          margin-left: -190px;
+          width: 182px;
+          height: 83px;
+        }
+
+        .beapharLogoPngSeeklo {
+          position: absolute;
+          bottom: -38px;
+          left: -185px;
+          width: 202px;
+          height: 202px;
+        }
+      }
+
+      .dots {
+        display: flex;
+        align-items: center;
+        align-self: stretch;
+        justify-content: space-between;
+        margin: 81px 329px 0px 371px;
+        min-width: 68px;
+        height: 12px;
+
+        .ellipse1826 {
+          border-radius: 50%;
+          background: #109afc;
+          width: 12px;
+          height: 12px;
+        }
+
+        .ellipse1827 {
+          border-radius: 50%;
+          background: #d9d9d9;
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+  }
+
+  .autoWrapper5 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    margin-top: 144px;
+    margin-left: 25px;
+
+    .balticovo {
+      width: 146px;
+      height: 83px;
+    }
+
+    .mTLogoEng3 {
+      margin-top: 38px;
+      margin-left: 46px;
+      width: 205px;
+      height: 83px;
+    }
+
+    .roche {
+      margin-top: 54px;
+      margin-left: 41px;
+      width: 146px;
+      height: 76px;
+    }
+  }
+}

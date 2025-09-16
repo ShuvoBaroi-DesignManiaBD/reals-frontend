@@ -1,25 +1,20 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { PricingCard, PricingFeature } from "@/components/PricingCard";
 import { SkolamFeatureItem } from "./SkolamFeatureItem";
 import { SkolamPricingTier } from "./SkolamPricingTier";
 
-interface PricingFeature {
-  text: string;
-  included: boolean;
-}
-
-interface PricingTier {
-  name: string;
-  price: string;
-  priceNote: string;
-  features: PricingFeature[];
-  highlighted?: boolean;
-  badge?: string;
-  color: string;
-}
+// interface PricingTier {
+//   name: string;
+//   price: string;
+//   priceNote: string;
+//   features: PricingFeature[];
+//   highlighted?: boolean;
+//   badge?: string;
+//   color: string;
+// }
 
 interface SkolamPricingTier {
   participants: string;
@@ -200,85 +195,23 @@ const pricingDataByCategory = {
   ],
   gimenem: [
     {
-      name: "Standarta",
-      price: "no 35.75 EUR*",
-      priceNote: "par personu",
+      name: "Pasākumā",
+      subHeading: "iekļauts",
+      price: "no 50 EUR*",
+      priceNote: "par dalībnieku",
       color: "#109AFC",
       features: [
         { text: "Pasākuma vadītājs", included: true },
         { text: "Tehniskā komanda", included: true },
-        { text: "Ģimenes aktivitātes", included: true },
+        { text: "Diplomi / Sertifikāti", included: true },
         { text: "Mini-Apskaņošana", included: true },
         { text: "Pasākuma programma", included: true },
         { text: "Pasākuma vietas organizēšana", included: true },
-        { text: "Bērnu rotaļas", included: false },
-        { text: "Medaļas", included: false },
-        { text: "Priekšnesumi/šovi", included: false },
-        { text: "Atklāšanas ceremonija", included: false },
-        { text: "Noslēguma ceremonija", included: false },
-        { text: "Apgaismojums", included: false },
-        { text: "DJ vai mūziķis", included: false },
-        { text: "Dzīvā mūzika", included: false },
-        { text: "Diskotēka", included: false },
-        { text: "Disko apgaismojums", included: false },
-        { text: "Dekorācijas", included: false },
-        { text: "Unikālas balvas", included: false },
-      ],
-    },
-    {
-      name: "Biznesa",
-      price: "no 58.90 EUR*",
-      priceNote: "par personu",
-      color: "#D151FF",
-      highlighted: true,
-      badge: "IZVĒLĒTĀKAIS",
-      features: [
-        { text: "Pasākuma vadītājs", included: true },
-        { text: "Tehniskā komanda", included: true },
-        { text: "Ģimenes aktivitātes", included: true },
-        { text: "Mini-Apskaņošana", included: true },
-        { text: "Pasākuma programma", included: true },
-        { text: "Pasākuma vietas organizēšana", included: true },
-        { text: "Bērnu rotaļas", included: true },
-        { text: "Medaļas", included: true },
-        { text: "Priekšnesumi/šovi", included: true },
+        { text: "Kopīgs klases kauss", included: true },
         { text: "Atklāšanas ceremonija", included: true },
         { text: "Noslēguma ceremonija", included: true },
-        { text: "Apgaismojums", included: true },
-        { text: "DJ vai mūziķis", included: false },
-        { text: "Dzīvā mūzika", included: false },
-        { text: "Diskotēka", included: false },
-        { text: "Disko apgaismojums", included: false },
-        { text: "Dekorācijas", included: false },
-        { text: "Unikālas balvas", included: false },
       ],
-    },
-    {
-      name: "VIP",
-      price: "no 95.50 EUR*",
-      priceNote: "par personu",
-      color: "#109AFC",
-      features: [
-        { text: "Pasākuma vadītājs", included: true },
-        { text: "Tehniskā komanda", included: true },
-        { text: "Ģimenes aktivitātes", included: true },
-        { text: "Mini-Apskaņošana", included: true },
-        { text: "Pasākuma programma", included: true },
-        { text: "Pasākuma vietas organizēšana", included: true },
-        { text: "Bērnu rotaļas", included: true },
-        { text: "Medaļas", included: true },
-        { text: "Priekšnesumi/šovi", included: true },
-        { text: "Standarta atklāšanas ceremonija", included: true },
-        { text: "Standarta noslēguma ceremonija", included: true },
-        { text: "Apgaismojums", included: true },
-        { text: "DJ vai mūziķis", included: true },
-        { text: "Dzīvā mūzika", included: true },
-        { text: "Diskotēka", included: true },
-        { text: "Disko apgaismojums", included: true },
-        { text: "Dekorācijas", included: true },
-        { text: "Unikālas balvas", included: true },
-      ],
-    },
+    }
   ],
 };
 
@@ -287,29 +220,30 @@ const skolamPricingData: SkolamPricingTier[] = [
   {
     participants: "20",
     price: "no 34 EUR",
-    priceNote: "par dalībnieku"
+    priceNote: "par dalībnieku",
   },
   {
     participants: "30",
     price: "no 30 EUR",
-    priceNote: "par dalībnieku"
+    priceNote: "par dalībnieku",
   },
   {
     participants: "40",
     price: "no 25 EUR",
-    priceNote: "par dalībnieku"
+    priceNote: "par dalībnieku",
   },
   {
     participants: "50",
     price: "no 23.50 EUR",
-    priceNote: "par dalībnieku"
+    priceNote: "par dalībnieku",
   },
   {
     participants: "100+",
     price: "no 22 EUR",
     priceNote: "par dalībnieku",
-    additionalNote: "Izbraucam uz jebkuru Latvijas vietu, ja tiek segti transporta izdevumi!"
-  }
+    additionalNote:
+      "Izbraucam uz jebkuru Latvijas vietu, ja tiek segti transporta izdevumi!",
+  },
 ];
 
 // Skolam features data
@@ -322,7 +256,7 @@ const skolamFeatures: SkolamFeature[] = [
   { text: "Pasākuma vietas organizēšana", icon: "/icons/Group 12619.svg" },
   { text: "Kopīgs klases kauss", icon: "/icons/Group 12619.svg" },
   { text: "Atklāšanas ceremonija", icon: "/icons/Group 12619.svg" },
-  { text: "Noslēguma ceremonija", icon: "/icons/Group 12619.svg" }
+  { text: "Noslēguma ceremonija", icon: "/icons/Group 12619.svg" },
 ];
 
 const additionalCosts = [
@@ -365,106 +299,30 @@ const PricingSection: React.FC = () => {
           </TabsList>
         </div>
 
-        {/* Subtitle */}
-        <p className="text-[26px] py-16 leading-[29px] tracking-[0.78px] text-center text-[#000000B2] font-['Poppins'] font-medium uppercase">
-          *vidējā cena aprēķina par 100 dalībniekiem
-        </p>
-
         {/* Tab Content for uznemumiem */}
         <TabsContent
           value="uznemumiem"
-          className="pb-20 flex items-center justify-between gap-10"
+          className="pb-10 flex flex-col items-center justify-between gap-10"
         >
+          {/* Subtitle */}
+        <p className="text-[26px] py-16 leading-[29px] tracking-[0.78px] text-center text-[#000000B2] font-['Poppins'] font-medium uppercase">
+          *vidējā cena aprēķina par 100 dalībniekiem
+        </p>
+        <div className="flex gap-10">
           {pricingDataByCategory.uznemumiem.map((tier, index) => (
-            <div key={tier.name} className={`w-full`}>
-              <div
-                key={tier.name}
-                className={`w-full flex flex-col bg-white rounded-[20px] flex-1 relative
-                   border-1 border-${tier?.color}
-                   ${
-                     tier.highlighted
-                       ? "shadow-[4px_4px_28px_9px_#d151ff33]"
-                       : "shadow-[1px_4px_28px_9px_#25a0dd33] bg-[#fffffff2]"
-                   }
-                   ${
-                     index === 1
-                       ? "mt-0 p-[80px_20px] self-stretch border border-primary"
-                       : "p-[40px_20px] self-center border border-secondary"
-                   }
-                 `}
-              >
-                {/* Badge for highlighted tier */}
-                {tier.badge && (
-                  <div className="absolute top-4 right-4">
-                    <div className="bg-white rounded-[20px] shadow-[0px_4px_4px_0px_#d151ff40] px-[28px] py-[13px]">
-                      <span className="text-[15px] font-light uppercase tracking-[1.35px] text-black font-['Poppins']">
-                        {tier.badge}
-                      </span>
-                    </div>
-                  </div>
-                )}
-
-                {/* Tier Name */}
-                <h3
-                  className="text-[44px] leading-[49px] tracking-[0.88px] font-['Poppins'] mb-[28px] ml-[4px]"
-                  style={{ color: tier.color }}
-                >
-                  {tier.name}
-                </h3>
-
-                {/* Features List */}
-                <div className="space-y-[3px] mb-[44px]">
-                  {tier.features.map((feature, featureIndex) => (
-                    <div
-                      key={featureIndex}
-                      className="flex items-start justify-between px-[9px]"
-                    >
-                      <Image
-                        src={
-                          feature.included
-                            ? index === 1
-                              ? "/icons/Group 12619.svg"
-                              : "/icons/mfi9icat-ynhvbr1.svg"
-                            : "/icons/mfi9icaw-i1dxcw1.svg"
-                        }
-                        alt={feature.included ? "Included" : "Not included"}
-                        width={17}
-                        height={17}
-                        className="mt-[2px] flex-shrink-0"
-                      />
-                      <span
-                        className={`
-                      text-[14px] leading-[20px] font-['Poppins'] ml-[9px] flex-1
-                      ${
-                        feature.included
-                          ? tier.highlighted
-                            ? "text-black"
-                            : "text-black"
-                          : "text-[#949292]"
-                      }
-                    `}
-                      >
-                        {feature.text}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Price */}
-                <div className="text-center">
-                  <p
-                    className="text-[35px] leading-[39px] tracking-[0.7px] font-['Poppins'] mb-[13px]"
-                    style={{ color: tier.color }}
-                  >
-                    {tier.price}
-                  </p>
-                  <p className="text-[14px] leading-[15px] text-black font-light font-['Poppins']">
-                    {tier.priceNote}
-                  </p>
-                </div>
-              </div>
-            </div>
+            <PricingCard
+              key={tier.name}
+              name={tier.name}
+              price={tier.price}
+              priceNote={tier.priceNote}
+              features={tier.features}
+              color={tier.color}
+              highlighted={tier.highlighted}
+              badge={tier.badge}
+              index={index}
+            />
           ))}
+        </div>
         </TabsContent>
 
         {/* Tab Content for skolam */}
@@ -507,88 +365,22 @@ const PricingSection: React.FC = () => {
         </TabsContent>
 
         {/* Tab Content for gimenem */}
-        <TabsContent value="gimenem" className="mt-0">
-          <div className="flex items-start justify-between gap-[39px] px-[39px] mb-[45px]">
+        <TabsContent value="gimenem" className="mt-10">
+          <div className="flex items-start justify-center gap-[39px] mb-[45px]">
             {pricingDataByCategory.gimenem.map((tier, index) => (
-              <div
-                key={tier.name}
-                className={`
-                   flex flex-col bg-white rounded-[20px] p-[50px_30px_42px] flex-1 relative
-                   ${
-                     tier.highlighted
-                       ? "shadow-[4px_4px_28px_9px_#d151ff33]"
-                       : "shadow-[1px_4px_28px_9px_#25a0dd33] bg-[#fffffff2]"
-                   }
-                   ${index === 1 ? "mt-0" : "mt-[31px]"}
-                 `}
-              >
-                {/* Badge for highlighted tier */}
-                {tier.badge && (
-                  <div className="absolute -top-[13px] right-[17px]">
-                    <div className="bg-white rounded-[20px] shadow-[0px_4px_4px_0px_#d151ff40] px-[28px] py-[13px]">
-                      <span className="text-[15px] font-light uppercase tracking-[1.35px] text-black font-['Poppins']">
-                        {tier.badge}
-                      </span>
-                    </div>
-                  </div>
-                )}
-
-                {/* Tier Name */}
-                <h3
-                  className="text-[44px] leading-[49px] tracking-[0.88px] font-['Poppins'] mb-[28px] ml-[4px]"
-                  style={{ color: tier.color }}
-                >
-                  {tier.name}
-                </h3>
-
-                {/* Features List */}
-                <div className="space-y-[3px] mb-[44px]">
-                  {tier.features.map((feature, featureIndex) => (
-                    <div
-                      key={featureIndex}
-                      className="flex items-start justify-between px-[9px]"
-                    >
-                      <Image
-                        src={
-                          feature.included
-                            ? "/icons/mfi9icat-ynhvbr1.svg"
-                            : "/icons/mfi9icaw-i1dxcw1.svg"
-                        }
-                        alt={feature.included ? "Included" : "Not included"}
-                        width={17}
-                        height={17}
-                        className="mt-[2px] flex-shrink-0"
-                      />
-                      <span
-                        className={`
-                           text-[14px] leading-[20px] font-['Poppins'] ml-[9px] flex-1
-                           ${
-                             feature.included
-                               ? tier.highlighted
-                                 ? "text-black"
-                                 : "text-black"
-                               : "text-[#949292]"
-                           }
-                         `}
-                      >
-                        {feature.text}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Price */}
-                <div className="text-center">
-                  <p
-                    className="text-[35px] leading-[39px] tracking-[0.7px] font-['Poppins'] mb-[13px]"
-                    style={{ color: tier.color }}
-                  >
-                    {tier.price}
-                  </p>
-                  <p className="text-[14px] leading-[15px] text-black font-light font-['Poppins']">
-                    {tier.priceNote}
-                  </p>
-                </div>
+              <div key={tier.name} className={index === 1 ? "" : "mt-[31px]"}>
+                <PricingCard
+                  name={tier.name}
+                  subHeading={tier.subHeading}
+                  price={tier.price}
+                  priceNote={tier.priceNote}
+                  features={tier.features}
+                  color={tier.color}
+                  highlighted={tier.highlighted}
+                  badge={tier.badge}
+                  index={index}
+                  className="p-[50px_30px_42px]"
+                />
               </div>
             ))}
           </div>

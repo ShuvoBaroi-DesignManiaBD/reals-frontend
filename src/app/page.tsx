@@ -12,6 +12,8 @@ import EventStages from "@/components/EventStages";
 import Testimonials from "@/components/Testimonials";
 import PricingSection from "@/components/PricingSection";
 import BenefitsAndBonusesSection from "@/components/BenefitsAndBonusesSection";
+import ClientsSection from "@/components/ClientsSection";
+import HistorySection from "@/components/HistorySection";
 
 export default function Home() {
   return (
@@ -105,6 +107,12 @@ export default function Home() {
 
       {/* Benefits and Bonuses Section */}
       <BenefitsAndBonusesSection />
+      
+      {/* Clients Section */}
+      <ClientsSection />
+      
+      {/* History Section */}
+      <HistorySection />
       
       <section 
         className="py-24 bg-gradient-to-br from-gray-50 to-white"
