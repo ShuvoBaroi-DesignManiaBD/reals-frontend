@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import SectionCTA from "./SectionCTA";
 

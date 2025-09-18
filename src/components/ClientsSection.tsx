@@ -166,8 +166,6 @@ const ClientsSection: React.FC = () => {
       }
     }
   };
-  
-  const currentLogos = getSlideLogos(currentSlide);
 
   return (
     <section className="py-20 bg-white rounded-[50px] my-20">

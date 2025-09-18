@@ -2,7 +2,6 @@
 
 import React from 'react'
 import { Button } from './ui/button'
-import Image from 'next/image'
 
 /**
  * ButtonShowcase Component
@@ -37,7 +36,7 @@ const ButtonShowcase: React.FC = () => {
             </Button>
           </div>
           <div className="mt-4 text-sm text-gray-600">
-            <p><strong>Usage:</strong> variant="purple" | variant="purple-shadow"</p>
+            <p><strong>Usage:</strong> variant=&quot;purple&quot; | variant=&quot;purple-shadow&quot;</p>
             <p><strong>Colors:</strong> #c347fc (primary), #a006d8 (with shadow)</p>
           </div>
         </section>
@@ -54,7 +53,7 @@ const ButtonShowcase: React.FC = () => {
             </Button>
           </div>
           <div className="mt-4 text-sm text-gray-600">
-            <p><strong>Usage:</strong> variant="cyan" | variant="cyan-shadow"</p>
+            <p><strong>Usage:</strong> variant=&quot;cyan&quot; | variant=&quot;cyan-shadow&quot;</p>
             <p><strong>Colors:</strong> #28e7c5 (primary), #28d7e7 (with shadow)</p>
           </div>
         </section>
@@ -77,7 +76,7 @@ const ButtonShowcase: React.FC = () => {
             </Button>
           </div>
           <div className="mt-4 text-sm text-gray-600">
-            <p><strong>Usage:</strong> variant="whatsapp" | variant="whatsapp-dark"</p>
+            <p><strong>Usage:</strong> variant=&quot;whatsapp&quot; | variant=&quot;whatsapp-dark&quot;</p>
             <p><strong>Colors:</strong> #25d366 (primary), #0fb34c (dark)</p>
             <p><strong>Note:</strong> Includes WhatsApp icon and justify-between layout</p>
           </div>

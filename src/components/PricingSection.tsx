@@ -6,16 +6,6 @@ import { PricingCard, PricingFeature } from "@/components/PricingCard";
 import { SkolamFeatureItem } from "./SkolamFeatureItem";
 import { SkolamPricingTier } from "./SkolamPricingTier";
 
-// interface PricingTier {
-//   name: string;
-//   price: string;
-//   priceNote: string;
-//   features: PricingFeature[];
-//   highlighted?: boolean;
-//   badge?: string;
-//   color: string;
-// }
-
 interface SkolamPricingTier {
   participants: string;
   price: string;
@@ -35,6 +25,8 @@ const pricingDataByCategory = {
       price: "no 74.25 EUR*",
       priceNote: "par dalībnieku",
       color: "#109AFC",
+      highlighted: false,
+      badge: undefined,
       features: [
         { text: "Pasākuma vadītājs", included: true },
         { text: "Tehniskā komanda", included: true },
@@ -89,6 +81,8 @@ const pricingDataByCategory = {
       price: "no 360.10 EUR*",
       priceNote: "par dalībnieku",
       color: "#109AFC",
+      highlighted: false,
+      badge: undefined,
       features: [
         { text: "Pasākuma vadītājs", included: true },
         { text: "Tehniskā komanda", included: true },
@@ -117,6 +111,8 @@ const pricingDataByCategory = {
       price: "no 45.50 EUR*",
       priceNote: "par skolēnu",
       color: "#109AFC",
+      highlighted: false,
+      badge: undefined,
       features: [
         { text: "Pasākuma vadītājs", included: true },
         { text: "Tehniskā komanda", included: true },
@@ -171,6 +167,8 @@ const pricingDataByCategory = {
       price: "no 125.75 EUR*",
       priceNote: "par skolēnu",
       color: "#109AFC",
+      highlighted: false,
+      badge: undefined,
       features: [
         { text: "Pasākuma vadītājs", included: true },
         { text: "Tehniskā komanda", included: true },
@@ -200,6 +198,8 @@ const pricingDataByCategory = {
       price: "no 50 EUR*",
       priceNote: "par dalībnieku",
       color: "#109AFC",
+      highlighted: false,
+      badge: undefined,
       features: [
         { text: "Pasākuma vadītājs", included: true },
         { text: "Tehniskā komanda", included: true },
@@ -302,13 +302,13 @@ const PricingSection: React.FC = () => {
         {/* Tab Content for uznemumiem */}
         <TabsContent
           value="uznemumiem"
-          className="pb-10 flex flex-col items-center justify-between gap-10"
+          className="pb-10 flex flex-col items-center justify-between"
         >
           {/* Subtitle */}
         <p className="text-[26px] py-16 leading-[29px] tracking-[0.78px] text-center text-[#000000B2] font-['Poppins'] font-medium uppercase">
           *vidējā cena aprēķina par 100 dalībniekiem
         </p>
-        <div className="flex gap-10">
+        <div className="flex gap-10 items-center">
           {pricingDataByCategory.uznemumiem.map((tier, index) => (
             <PricingCard
               key={tier.name}
@@ -326,7 +326,7 @@ const PricingSection: React.FC = () => {
         </TabsContent>
 
         {/* Tab Content for skolam */}
-        <TabsContent value="skolam" className="mt-0">
+        <TabsContent value="skolam" className="mt-10">
           <div className="w-5/6 mx-auto grid grid-cols-5 justify-between gap-[39px] mb-[45px]">
             {/* Left Panel - Features Included */}
             <div className="col-span-2 self-stretch border-t border-secondary flex flex-col bg-[#fffffff2] rounded-[20px] shadow-[1px_4px_28px_9px_#25a0dd33] p-10 min-w-[328px]">
@@ -388,7 +388,7 @@ const PricingSection: React.FC = () => {
       </Tabs>
 
       {/* Description */}
-      <p className="text-center text-black font-['Poppins'] font-medium text-[16px] leading-[24px] mb-[45px] mx-auto">
+      <p className="text-center text-black font-['Poppins'] font-medium text-[16px] leading-[24px] my-[45px] mx-auto">
         Katrs mūsu pasākums ir unikāls, tāpēc arī cena tiek veidota individuāli,
         balstoties uz Taviem mērķiem, dalībnieku skaitu un vēlmēm.
         <br />

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Play, X, ArrowRight } from 'lucide-react';
+import { X } from 'lucide-react';
 import SectionCTA from './SectionCTA';
 
 interface MediaItem {

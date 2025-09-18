@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import {
@@ -11,7 +11,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { type CarouselApi } from "@/components/ui/carousel";
-import { log } from "console";
+
 
 interface TestimonialData {
   id: number;
@@ -91,7 +91,7 @@ const galleryImages = [
 const Testimonials = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(1);
-  const [count, setCount] = useState(0);
+
   console.log("current", current);
 
   return (
@@ -196,7 +196,7 @@ const Testimonials = () => {
             className="w-full"
           >
             <CarouselContent className="-ml-6">
-              {testimonialData.map((testimonial, index) => (
+              {testimonialData.map((testimonial) => (
                 <CarouselItem key={testimonial.id} className="pl-6 basis-1/3">
                   <div
                     className="bg-white rounded-[20px] h-full"

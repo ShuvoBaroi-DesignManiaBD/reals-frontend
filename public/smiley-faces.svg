@@ -1,0 +1,31 @@
+<svg width="549" height="81" viewBox="0 0 549 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Very Sad Face -->
+  <circle cx="40.5" cy="40.5" r="35" fill="none" stroke="#c347fc" stroke-width="3"/>
+  <circle cx="30" cy="30" r="3" fill="#c347fc"/>
+  <circle cx="51" cy="30" r="3" fill="#c347fc"/>
+  <path d="M25 55 Q40.5 45 56 55" stroke="#c347fc" stroke-width="3" fill="none"/>
+  
+  <!-- Sad Face -->
+  <circle cx="149.5" cy="40.5" r="35" fill="none" stroke="#c347fc" stroke-width="3"/>
+  <circle cx="139" cy="30" r="3" fill="#c347fc"/>
+  <circle cx="160" cy="30" r="3" fill="#c347fc"/>
+  <path d="M130 52 Q149.5 47 169 52" stroke="#c347fc" stroke-width="3" fill="none"/>
+  
+  <!-- Neutral Face -->
+  <circle cx="274.5" cy="40.5" r="35" fill="none" stroke="#c347fc" stroke-width="3"/>
+  <circle cx="264" cy="30" r="3" fill="#c347fc"/>
+  <circle cx="285" cy="30" r="3" fill="#c347fc"/>
+  <line x1="255" y1="50" x2="294" y2="50" stroke="#c347fc" stroke-width="3"/>
+  
+  <!-- Happy Face -->
+  <circle cx="399.5" cy="40.5" r="35" fill="none" stroke="#c347fc" stroke-width="3"/>
+  <circle cx="389" cy="30" r="3" fill="#c347fc"/>
+  <circle cx="410" cy="30" r="3" fill="#c347fc"/>
+  <path d="M380 45 Q399.5 55 419 45" stroke="#c347fc" stroke-width="3" fill="none"/>
+  
+  <!-- Very Happy Face -->
+  <circle cx="508.5" cy="40.5" r="35" fill="none" stroke="#c347fc" stroke-width="3"/>
+  <circle cx="498" cy="30" r="3" fill="#c347fc"/>
+  <circle cx="519" cy="30" r="3" fill="#c347fc"/>
+  <path d="M485 42 Q508.5 60 532 42" stroke="#c347fc" stroke-width="3" fill="none"/>
+</svg>

@@ -30,7 +30,7 @@ const buttonVariants = cva(
       size: {
         default: "py-3 px-4 py-2",
         sm: "py-3 rounded-md px-3",
-        lg: "py-3 rounded-md px-8",
+        lg: "py-4 rounded-md px-8",
         xl: "py-3 rounded-md px-16",
         icon: "py-3 w-10",
         // Figma specific sizes

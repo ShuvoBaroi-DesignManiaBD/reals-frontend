@@ -8,7 +8,7 @@ interface ctaProps{
 } 
 const SectionCTA = ({iconType, title, description, buttonText}: ctaProps) => {
     return (
-        <div className="flex items-start justify-between mt-12">
+        <div className="w-full flex items-start justify-between">
           <div className="flex items-start">
             <div className="w-[35px] h-[35px] flex-shrink-0">
                 {iconType === 'darkPurple' && (

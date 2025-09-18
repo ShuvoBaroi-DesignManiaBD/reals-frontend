@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { Button } from './ui/button';
 
 interface EventItem {
   date: string;
@@ -56,6 +57,61 @@ const HistorySection: React.FC = () => {
       participants: 680
     },
     {
+      date: "05.11.2023.",
+      title: "Mūzikas festivāls 'Autumn Sounds'",
+      participants: 680
+    },
+    {
+      date: "05.11.2023.",
+      title: "Mūzikas festivāls 'Autumn Sounds'",
+      participants: 680
+    },
+    {
+      date: "05.11.2023.",
+      title: "Mūzikas festivāls 'Autumn Sounds'",
+      participants: 680
+    },
+    {
+      date: "05.11.2023.",
+      title: "Mūzikas festivāls 'Autumn Sounds'",
+      participants: 680
+    },
+    {
+      date: "05.11.2023.",
+      title: "Mūzikas festivāls 'Autumn Sounds'",
+      participants: 680
+    },
+    {
+      date: "05.11.2023.",
+      title: "Mūzikas festivāls 'Autumn Sounds'",
+      participants: 680
+    },
+    {
+      date: "05.11.2023.",
+      title: "Mūzikas festivāls 'Autumn Sounds'",
+      participants: 680
+    },
+    {
+      date: "05.11.2023.",
+      title: "Mūzikas festivāls 'Autumn Sounds'",
+      participants: 680
+    },
+    {
+      date: "05.11.2023.",
+      title: "Mūzikas festivāls 'Autumn Sounds'",
+      participants: 680
+    },
+    {
+      date: "05.11.2023.",
+      title: "Mūzikas festivāls 'Autumn Sounds'",
+      participants: 680
+    },
+    {
+      date: "05.11.2023.",
+      title: "Mūzikas festivāls 'Autumn Sounds'",
+      participants: 680
+    },
+    {
       date: "18.10.2023.",
       title: "Biznesa konference 'Future Tech'",
       participants: 220
@@ -72,7 +128,7 @@ const HistorySection: React.FC = () => {
       {/* Main Content Container */}
       <div className="flex items-start justify-between w-full max-w-screen-xl rounded-[20px] bg-white p-[60px_40px] shadow-[4px_4px_28px_9px_rgba(209,81,255,0.2)]">
         {/* Events List */}
-        <div className="flex flex-col gap-0 items-center flex-1 h-[343px] overflow-x-hidden overflow-y-auto pr-4 scrollbar-custom">
+        <div className="flex flex-col gap-0 items-center flex-1 h-[370px] overflow-x-hidden overflow-y-auto pr-4 scrollbar-custom">
           {/* <style jsx>{`
             div::-webkit-scrollbar {
               width: 8px;
@@ -118,11 +174,9 @@ const HistorySection: React.FC = () => {
       </div>
       
       {/* CTA Button */}
-      <div className="flex items-center justify-center mt-[42px] mx-auto rounded-[5px] bg-[#c347fc] px-[59px_63px] py-[16px_19px]">
-        <button className="text-[15px] leading-[17px] tracking-[0px] text-white font-['Nunito_Sans'] font-medium uppercase hover:bg-[#a83dd9] transition-colors duration-300">
+        <Button variant="purple" size="lg" className="mt-20 px-16">
           apskatīt visus pasākumus
-        </button>
-      </div>
+        </Button>
     </section>
   );
 };
