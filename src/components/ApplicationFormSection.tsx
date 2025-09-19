@@ -30,7 +30,7 @@ const formSchema = z.object({
   eventTime: z.string().optional(),
   budget: z.string().optional(),
   specialRequests: z.string().optional(),
-  newsletter: z.boolean().default(false),
+  newsletter: z.boolean(),
 });
 
 type FormData = z.infer<typeof formSchema>;

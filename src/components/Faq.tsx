@@ -132,7 +132,7 @@ const faqItems: FAQItem[] = [
   },
 ];
 
-const events: EventItem[] = [
+const events: { date: string; title: string; participants: number }[] = [
   {
     date: "02.06.2025.",
     title: "Deju kolektīvs Dancītis, saliedēšanas pasākums",

@@ -106,9 +106,6 @@ const SocialResponsibilitySection = () => {
         iconType="darkPurple"
         title="Gribi atbalstīt vai uzdāvināt kādam piedzīvojumu?
 Raksti mums un mēs pastāstīsim, kā vari iesaistīties."
-        variant="purple"
-        size="lg"
-        className="w-full !mx-auto"
         buttonText="apskatīt visus pasākumus"
       ></SectionCTA>
     </section>
