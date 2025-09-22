@@ -1,8 +1,3 @@
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { BrandCard } from "@/components/ui/brand-card";
-import { BrandButton } from "@/components/ui/brand-button";
-import { Star } from "lucide-react";
 import NewsCarousel from "@/components/NewsCarousel";
 import EventsSection from "@/components/EventsSection";
 import NumbersSection from "@/components/NumbersSection";

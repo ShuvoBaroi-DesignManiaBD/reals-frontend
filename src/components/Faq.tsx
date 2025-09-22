@@ -16,7 +16,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./ui/accordion";
-import { Plus, Minus, X } from "lucide-react";
+
 
 const galleryImages = [
   "/mf6ed80v-2aa3s74.png",
@@ -132,113 +132,7 @@ const faqItems: FAQItem[] = [
   },
 ];
 
-const events: { date: string; title: string; participants: number }[] = [
-  {
-    date: "02.06.2025.",
-    title: "Deju kolektīvs Dancītis, saliedēšanas pasākums",
-    participants: 73,
-  },
-  {
-    date: "30.07.2024.",
-    title: "Ropažu novada Sporta diena Ulbrokā",
-    participants: 900,
-  },
-  {
-    date: "15.05.2024.",
-    title: "Korporatīvais pasākums SIA 'Baltika'",
-    participants: 150,
-  },
-  {
-    date: "22.04.2024.",
-    title: "Bērnu dienas svinības Rīgas centrā",
-    participants: 250,
-  },
-  {
-    date: "10.03.2024.",
-    title: "Uzņēmuma 'TechCorp' gada ballīte",
-    participants: 180,
-  },
-  {
-    date: "28.02.2024.",
-    title: "Sporta kluba 'Dinamo' jubilejas pasākums",
-    participants: 320,
-  },
-  {
-    date: "14.01.2024.",
-    title: "Jaungada svinības viesnīcā 'Grand Palace'",
-    participants: 450,
-  },
-  {
-    date: "20.12.2023.",
-    title: "Ziemassvētku korporatīvais pasākums",
-    participants: 95,
-  },
-  {
-    date: "05.11.2023.",
-    title: "Mūzikas festivāls 'Autumn Sounds'",
-    participants: 680,
-  },
-  {
-    date: "05.11.2023.",
-    title: "Mūzikas festivāls 'Autumn Sounds'",
-    participants: 680,
-  },
-  {
-    date: "05.11.2023.",
-    title: "Mūzikas festivāls 'Autumn Sounds'",
-    participants: 680,
-  },
-  {
-    date: "05.11.2023.",
-    title: "Mūzikas festivāls 'Autumn Sounds'",
-    participants: 680,
-  },
-  {
-    date: "05.11.2023.",
-    title: "Mūzikas festivāls 'Autumn Sounds'",
-    participants: 680,
-  },
-  {
-    date: "05.11.2023.",
-    title: "Mūzikas festivāls 'Autumn Sounds'",
-    participants: 680,
-  },
-  {
-    date: "05.11.2023.",
-    title: "Mūzikas festivāls 'Autumn Sounds'",
-    participants: 680,
-  },
-  {
-    date: "05.11.2023.",
-    title: "Mūzikas festivāls 'Autumn Sounds'",
-    participants: 680,
-  },
-  {
-    date: "05.11.2023.",
-    title: "Mūzikas festivāls 'Autumn Sounds'",
-    participants: 680,
-  },
-  {
-    date: "05.11.2023.",
-    title: "Mūzikas festivāls 'Autumn Sounds'",
-    participants: 680,
-  },
-  {
-    date: "05.11.2023.",
-    title: "Mūzikas festivāls 'Autumn Sounds'",
-    participants: 680,
-  },
-  {
-    date: "05.11.2023.",
-    title: "Mūzikas festivāls 'Autumn Sounds'",
-    participants: 680,
-  },
-  {
-    date: "18.10.2023.",
-    title: "Biznesa konference 'Future Tech'",
-    participants: 220,
-  },
-];
+
 
 const Faq = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -309,9 +203,11 @@ const Faq = () => {
                   customIcon
                   className="!static bg-transparent hover:bg-transparent size-10"
                   onClick={() => {
-                    current === 0
-                      ? setCurrent(galleryImages?.length - 1)
-                      : setCurrent(current - 1);
+                    if (current === 0) {
+                      setCurrent(galleryImages?.length - 1);
+                    } else {
+                      setCurrent(current - 1);
+                    }
                     api?.scrollPrev();
                   }}
                 />
@@ -319,9 +215,11 @@ const Faq = () => {
                   customIcon
                   className="!static bg-transparent hover:bg-transparent size-10"
                   onClick={() => {
-                    current === galleryImages?.length - 1
-                      ? setCurrent(0)
-                      : setCurrent(current + 1);
+                    if (current === galleryImages?.length - 1) {
+                      setCurrent(0);
+                    } else {
+                      setCurrent(current + 1);
+                    }
                     api?.scrollNext();
                   }}
                 />

@@ -164,9 +164,11 @@ const Testimonials = () => {
                   customIcon
                   className="!static bg-transparent hover:bg-transparent size-10"
                   onClick={() => {
-                    current === 0
-                      ? setCurrent(galleryImages?.length - 1)
-                      : setCurrent(current - 1);
+                    if (current === 0) {
+                      setCurrent(galleryImages?.length - 1);
+                    } else {
+                      setCurrent(current - 1);
+                    }
                     api?.scrollPrev();
                   }}
                 />
@@ -174,9 +176,11 @@ const Testimonials = () => {
                   customIcon
                   className="!static bg-transparent hover:bg-transparent size-10"
                   onClick={() => {
-                    current === galleryImages?.length - 1
-                      ? setCurrent(0)
-                      : setCurrent(current + 1);
+                    if (current === galleryImages?.length - 1) {
+                      setCurrent(0);
+                    } else {
+                      setCurrent(current + 1);
+                    }
                     api?.scrollNext();
                   }}
                 />

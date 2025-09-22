@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 
 // TypeScript interfaces for type safety
@@ -322,13 +321,13 @@ export function Footer() {
                     placeholder="e-pasts"
                     className="bg-transparent text-white placeholder-white p-3 text-[14px] font-poppins flex-1 max-w-[251px]"
                   />
-                  <button className="w-[128px] h-[41px] bg-transparent text-primary p-3.5 rounded-[6px] border-[2px] border-primary text-[14px] font-poppins font-medium uppercase leading-0">
+                  <button className="w-[128px] h-[41px] bg-transparent text-primary p-3.5 rounded-r-[6px] border-[2px] border-primary text-[14px] font-poppins font-medium uppercase leading-0">
                     PIETEIKTIES
                   </button>
                 </div>
                 {/* Social Icons */}
-                <div className="flex space-x-4">
-                  {footerData.socialIcons.map((icon, index) => (
+                <div className="flex space-x-4 mt-6">
+                  {footerData?.socialIcons?.map((icon, index) => (
                     <Image
                       key={index}
                       src={icon.src}

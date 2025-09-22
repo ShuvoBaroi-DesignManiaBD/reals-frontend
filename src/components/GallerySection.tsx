@@ -125,7 +125,7 @@ const GallerySection: React.FC = () => {
           }}
         >
           <div 
-            className="responsive-gallery-grid gap-4"
+            className="responsive-gallery-grid gap-4 pb-10"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(var(--grid-cols, 3), 1fr)',

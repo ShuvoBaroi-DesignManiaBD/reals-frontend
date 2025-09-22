@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { PricingCard, PricingFeature } from "@/components/PricingCard";
+import { PricingCard } from "@/components/PricingCard";
 import { SkolamFeatureItem } from "./SkolamFeatureItem";
 import { SkolamPricingTier } from "./SkolamPricingTier";
 

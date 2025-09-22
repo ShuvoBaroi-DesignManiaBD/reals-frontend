@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +12,7 @@ export function Header() {
   };
 
   return (
-    <header className="z-50">
+    <header className="z-50 sticky top-0">
       {/* Figma Design: Rectangle 64 - Main Header Container */}
       <div className="bg-[#081528] max-w-screen" style={{ height: "123px" }}>
         {/* Top Bar with Gradient Background - Rectangle 197 */}
@@ -143,6 +144,7 @@ export function Header() {
         </div>
 
         <div className="flex justify-between items-center py-2 max-w-screen-xl mx-auto">
+          <Link href="/" className="z-50">
             <Image
               src="/logo.svg"
               alt="Reāls Piedzīvojums Logo"
@@ -150,6 +152,7 @@ export function Header() {
               height={77}
               className="w-[186px] h-full z-10 -mt-8"
             />
+          </Link>
 
           {/* Main Navigation Section - Auto Wrapper 2 */}
           <div className="flex pt-2.5 items-center justify-stretch gap-5">

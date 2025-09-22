@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
-import Image from "next/image";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -10,7 +9,6 @@ import {
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -36,7 +34,6 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 const ApplicationFormSection: React.FC = () => {
-  const [showForm, setShowForm] = useState(true);
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
