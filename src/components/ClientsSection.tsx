@@ -8,7 +8,11 @@ interface CarouselConfig {
   transitionDuration: number;
 }
 
-const ClientsSection: React.FC = () => {
+interface ClientsSectionProps {
+  className?: string;
+}
+
+const ClientsSection: React.FC<ClientsSectionProps> = ({ className }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -168,7 +172,7 @@ const ClientsSection: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-white rounded-[50px] my-20">
+    <section className={`py-20 bg-white rounded-[50px] my-20 ${className}`}>
       <div className="relative">
         {/* Title */}
         <h2 className="text-[44px] leading-[49px] tracking-[0.88px] text-[#121212] font-['Poppins'] text-center pb-16">

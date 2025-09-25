@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+.rectangle221 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 20px;
+  box-shadow: 4px 4px 28px 9px #d151ff33;
+  padding: 91px 124px 119px 72px;
+  width: 1260px;
+  height: 622px;
+  background-image: linear-gradient(290.18deg, #109afc 1.96%, #c347fc 93.42%);
+
+  .vRds {
+    width: 331px;
+    letter-spacing: 0;
+    color: #3f3f3f;
+    font-family: Poppins, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .autoWrapper {
+    display: flex;
+    align-items: flex-start;
+    align-self: stretch;
+    justify-content: space-between;
+    padding-right: 0;
+    padding-left: 0;
+
+    .pieteiktiesPasKumam {
+      width: 342px;
+      line-height: 49px;
+      letter-spacing: 0.88px;
+      color: #ffffff;
+      font-family: Poppins, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+      font-size: 44px;
+    }
+
+    .rectangle215 {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 20px;
+      border: 1px solid #c1d5e3;
+      border-radius: 10px;
+      background: #ffffffe5;
+      padding: 14px 214px 27px 15px;
+      backdrop-filter: blur(2px);
+    }
+  }
+
+  .autoWrapper3 {
+    display: flex;
+    align-items: flex-start;
+    align-self: stretch;
+    justify-content: space-between;
+    margin-top: 1px;
+    padding-right: 0;
+    padding-left: 0;
+
+    .aizpildiSuPieteikuma {
+      margin: 29px 0px 0px;
+      width: 447px;
+      line-height: 25px;
+      letter-spacing: 0;
+      color: #ffffff;
+      font-family: Poppins, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+      font-size: 18px;
+    }
+
+    .autoWrapper2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-self: stretch;
+
+      .rectangle38 {
+        display: flex;
+        align-items: flex-start;
+        align-self: stretch;
+        border: 1px solid #c1d5e3;
+        border-radius: 10px;
+        background: #ffffffe5;
+        padding: 14px 214px 27px 15px;
+        backdrop-filter: blur(2px);
+      }
+
+      .rectangle39 {
+        display: flex;
+        align-items: flex-start;
+        align-self: stretch;
+        margin-top: 15px;
+        border: 1px solid #c1d5e3;
+        border-radius: 10px;
+        background: #ffffffe5;
+        padding: 14px 19px 27px 15px;
+        backdrop-filter: blur(2px);
+
+        .epasts {
+          width: 526px;
+          letter-spacing: 0;
+          color: #3f3f3f;
+          font-family: Poppins, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+          font-size: 14px;
+          font-weight: 300;
+        }
+      }
+
+      .rectangle211 {
+        display: flex;
+        align-items: flex-start;
+        align-self: stretch;
+        margin-top: 15px;
+        border: 1px solid #c1d5e3;
+        border-radius: 10px;
+        background: #ffffffe5;
+        padding: 14px 36px 27px 15px;
+        backdrop-filter: blur(2px);
+
+        .tLrunis {
+          width: 509px;
+          letter-spacing: 0;
+          color: #3f3f3f;
+          font-family: Poppins, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+          font-size: 14px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  .rectangle193 {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    margin-top: 43px;
+    margin-left: 502px;
+    border: 1px solid #c347fc;
+    border-radius: 5px;
+    background: #ffffff;
+    padding: 14px 218px 15px 212px;
+
+    .button {
+      line-height: 17px;
+      letter-spacing: 0;
+      color: #c347fc;
+      font-family: "Nunito Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      text-transform: UPPERCASE;
+    }
+  }
+}

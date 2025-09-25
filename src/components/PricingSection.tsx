@@ -268,7 +268,8 @@ const additionalCosts = [
 
 const PricingSection: React.FC = () => {
   return (
-    <section className="py-24 max-w-screen-xl mx-auto">
+    <section className="bg-white">
+      <div className="py-24 max-w-screen-xl mx-auto">
       {/* Main Title */}
       <h2 className="text-[60px] leading-[67px] text-center text-black font-['Poppins'] mb-[40px] w-full">
         Cik maksā pasākums?
@@ -420,6 +421,7 @@ const PricingSection: React.FC = () => {
         <button className="bg-[#109AFC] text-white font-['Poppins'] text-[16px] font-medium uppercase tracking-wide px-[40px] py-[18px] rounded-[5px] hover:bg-[#0e87e0] transition-colors duration-300">
           PIETEIKT BEZMAKSAS KONSULTĀCIJU
         </button>
+      </div>
       </div>
     </section>
   );

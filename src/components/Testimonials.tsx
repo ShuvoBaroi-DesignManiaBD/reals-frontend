@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/carousel";
 import { type CarouselApi } from "@/components/ui/carousel";
 
-
 interface TestimonialData {
   id: number;
   title: string;
@@ -88,7 +87,7 @@ const galleryImages = [
   "/mf6ed80v-mqe8acc.png",
 ];
 
-const Testimonials = () => {
+const Testimonials = ({ outLineButton }: { outLineButton?: boolean }) => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(1);
 
@@ -252,9 +251,11 @@ const Testimonials = () => {
         {/* Action Buttons and Navigation */}
         <div className="flex items-start justify-between">
           <div className="w-full flex items-center justify-center mt-[50px] gap-5">
-            <Button variant="outline" size="xl">
-              Atstāt atsauksmi
-            </Button>
+            {outLineButton && (
+              <Button variant="outline" size="xl">
+                Atstāt atsauksmi
+              </Button>
+            )}
             <Button variant="default" size="xl" className="py-3.5">
               Atstāt atsauksmi
             </Button>

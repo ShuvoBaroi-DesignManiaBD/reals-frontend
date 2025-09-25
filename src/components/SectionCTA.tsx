@@ -13,7 +13,7 @@ const SectionCTA = ({iconType, title, description, buttonText}: ctaProps) => {
             <div className="w-[35px] h-[35px] flex-shrink-0">
                 {iconType === 'darkPurple' && (
                     <Image
-                        src={"icons/Vector-15.svg"}
+                        src={"/icons/Vector-15.svg"}
                         width={35}
                         height={35}
                         alt="call-to-action-icon"
@@ -21,7 +21,7 @@ const SectionCTA = ({iconType, title, description, buttonText}: ctaProps) => {
                 )}
                 {iconType === 'skyBlue' && (
                     <Image
-                        src={"icons/Vector-16.svg"}
+                        src={"/icons/Vector-16.svg"}
                         width={35}
                         height={35}
                         alt="call-to-action-icon"
@@ -29,7 +29,7 @@ const SectionCTA = ({iconType, title, description, buttonText}: ctaProps) => {
                 )}
                 {iconType === 'lightPurple' && (
                     <Image
-                        src={"icons/Vector-17.svg"}
+                        src={"/icons/Vector-17.svg"}
                         width={35}
                         height={35}
                         alt="call-to-action-icon"
