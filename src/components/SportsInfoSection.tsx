@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 interface SportsInfoSectionProps {
@@ -112,7 +113,9 @@ const SportsInfoSection: React.FC<SportsInfoSectionProps> = ({ onButtonClick }) 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
               {keyStats.map((stat, index) => (
                 <div key={index} className="flex flex-col items-center text-center">
-                  <img 
+                  <Image
+                    width={59}
+                    height={59}
                     src={stat.icon} 
                     alt={stat.label}
                     className="w-12 h-12 lg:w-[59px] lg:h-[59px] mb-3 lg:mb-4"

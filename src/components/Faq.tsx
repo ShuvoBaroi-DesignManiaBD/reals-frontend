@@ -8,7 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import { Button } from "./ui/button";
 import {
   Accordion,
@@ -18,7 +18,6 @@ import {
 } from "./ui/accordion";
 import { faqItems } from "@/data/faqData";
 
-import galleryImages from "@/data/galleryImages";
 import SectionCTA, { ctaProps } from "./SectionCTA";
 
 

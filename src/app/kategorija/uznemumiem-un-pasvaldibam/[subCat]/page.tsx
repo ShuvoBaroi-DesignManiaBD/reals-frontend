@@ -8,13 +8,13 @@ import Testimonials from "@/components/Testimonials";
 import Faq from "@/components/Faq";
 import SimpleApplicationForm from "@/components/SimpleApplicationForm";
 
-interface PageProps {
-  params: {
-    subCat: string;
-  };
-}
+// interface PageProps {
+//   params: {
+//     subCat: string;
+//   };
+// }
 
-export default function SubCategoryPage({ params }: PageProps) {
+export default function SubCategoryPage() {
   const handleButtonClick = () => {
     // Handle button click action - could be scroll to form, open modal, etc.
     console.log("Program request button clicked");

@@ -1,4 +1,8 @@
+"use client"
+import { ProgramItem } from "@/data/programData";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 interface CardProps {
@@ -10,6 +14,7 @@ interface CardProps {
   hasButton?: boolean;
   buttonText?: string;
   hoverImage?: string; // Optional hover image path
+  data?: ProgramItem;
 }
 
 const CTAcard: React.FC<CardProps> = ({
@@ -20,9 +25,13 @@ const CTAcard: React.FC<CardProps> = ({
   hasButton,
   buttonText,
   hoverImage,
+  data=null
 }) => {
   const [isHovered, setIsHovered] = useState(false);
-
+  const pathname = usePathname();
+  const router = useRouter();
+  console.log(pathname);
+  
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -31,10 +40,12 @@ const CTAcard: React.FC<CardProps> = ({
     setIsHovered(false);
   };
 
+
   return (
     <div className="relative w-full max-w-[427px] h-[297px] rounded-[20px] overflow-hidden group cursor-pointer transform transition-all duration-500 ease-out hover:scale-[1.02] hover:shadow-2xl hover:shadow-black/20"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={() => router?.push(`${data ? `${pathname}/${data?.id}` : ''}`)}
     >
       <Image
         src={isHovered && hoverImage ? hoverImage : image}

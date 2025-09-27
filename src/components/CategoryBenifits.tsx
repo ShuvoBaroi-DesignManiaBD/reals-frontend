@@ -58,7 +58,7 @@ const BenefitItemComponent: React.FC<{
   benefit: BenefitItem;
   isFirst?: boolean;
   isLast?: boolean;
-}> = ({ benefit, isFirst = false, isLast = false }) => {
+}> = ({ benefit }) => {
   return (
     <div className="flex flex-col items-center flex-1">
       <Image

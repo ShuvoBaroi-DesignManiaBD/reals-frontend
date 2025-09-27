@@ -8,7 +8,6 @@ import Testimonials from "@/components/Testimonials";
 import PricingSection from "@/components/PricingSection";
 import BenefitsAndBonusesSection from "@/components/BenefitsAndBonusesSection";
 import ClientsSection from "@/components/ClientsSection";
-import HistorySection from "@/components/HistorySection";
 import Faq from "@/components/Faq";
 import SocialResponsibilitySection from "@/components/SocialResponsibilitySection";
 import ApplicationFormSection from "@/components/ApplicationFormSection";

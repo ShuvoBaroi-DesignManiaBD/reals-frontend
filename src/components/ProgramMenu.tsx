@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
-import ProgramCard from "./ProgramCard";
 import { ProgramItem, TabCategory } from "@/data/programData";
 import { Sparkles } from "lucide-react";
 import CTAcard from "./CTAcard";
@@ -105,6 +104,7 @@ const ProgramMenu: React.FC<ProgramMenuProps> = ({
                     title={program.title}
                     description={program?.description}
                     hasButton={true}
+                    data={program}
                   />
                 ))}
                 {/* CTA Section positioned in bottom-right */}

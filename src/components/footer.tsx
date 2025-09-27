@@ -260,8 +260,7 @@ const UsefulLinksSection = ({ links }: { links: NavigationItem[] }) => (
 );
 
 const ContactSection = ({
-  contact,
-  socialIcons,
+  contact
 }: {
   contact: ContactInfo;
   socialIcons: SocialIcon[];
