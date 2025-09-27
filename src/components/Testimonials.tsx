@@ -87,7 +87,7 @@ const galleryImages = [
   "/mf6ed80v-mqe8acc.png",
 ];
 
-const Testimonials = ({ outLineButton }: { outLineButton?: boolean }) => {
+const Testimonials = ({ outLineButton, gallerySection = true, cards = true, button=true, title=true }: { outLineButton?: boolean, gallerySection?: boolean, cards?: boolean, button?: boolean, title?: boolean }) => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(1);
 
@@ -97,12 +97,13 @@ const Testimonials = ({ outLineButton }: { outLineButton?: boolean }) => {
     <section className="bg-[#F9F7FB] py-20 w-full">
       <div className="max-w-screen-xl mx-auto">
         {/* Title */}
-        <h2 className="text-[60px] leading-[67px] text-center text-black font-['Poppins'] mb-[62px] w-full mx-auto">
+        {title && <h2 className="text-[60px] leading-[67px] text-center text-black font-['Poppins'] mb-[62px] w-full mx-auto">
           Ko par mums saka pasākumu dalībnieki?
-        </h2>
+        </h2>}
+        
 
         {/* Image Gallery with Navigation */}
-        <div className="flex flex-col gap-5 items-center justify-between mb-16">
+        {gallerySection && <div className="flex flex-col gap-5 items-center justify-between mb-16">
           {/* Gallery Images - 3 Images Per Slide */}
           <div className="relative w-full mx-auto">
             <Carousel
@@ -186,10 +187,10 @@ const Testimonials = ({ outLineButton }: { outLineButton?: boolean }) => {
               </div>
             </Carousel>
           </div>
-        </div>
-
+        </div>}
+        
         {/* Testimonial Cards */}
-        <div className="mb-10">
+        {cards && <div className="mb-10">
           <Carousel
             opts={{
               align: "start",
@@ -246,8 +247,8 @@ const Testimonials = ({ outLineButton }: { outLineButton?: boolean }) => {
               />
             </div>
           </Carousel>
-        </div>
-
+        </div>}
+        
         {/* Action Buttons and Navigation */}
         <div className="flex items-start justify-between">
           <div className="w-full flex items-center justify-center mt-[50px] gap-5">
@@ -256,9 +257,11 @@ const Testimonials = ({ outLineButton }: { outLineButton?: boolean }) => {
                 Atstāt atsauksmi
               </Button>
             )}
-            <Button variant="default" size="xl" className="py-3.5">
-              Atstāt atsauksmi
-            </Button>
+            {button && (
+              <Button variant="default" size="xl" className="py-3.5">
+                Atstāt atsauksmi
+              </Button>
+            )}
           </div>
         </div>
       </div>

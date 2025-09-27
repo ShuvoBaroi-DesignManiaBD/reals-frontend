@@ -19,21 +19,21 @@ import {
 import { faqItems } from "@/data/faqData";
 
 import galleryImages from "@/data/galleryImages";
-import SectionCTA from "./SectionCTA";
+import SectionCTA, { ctaProps } from "./SectionCTA";
 
 
 
 
 
-const Faq = ({galleryImages,title,sectionCta}: {galleryImages?: string[], title?:string,sectionCta?: boolean}) => {
+const Faq = ({galleryImages,title,sectionCta,description,iconType="darkPurple",sectionTitle="Ko par mums saka pasākumu dalībnieki?"}: {galleryImages?: string[], title?:string,sectionCta?: boolean, description?: string, iconType?: ctaProps['iconType'],sectionTitle?:string}) => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(1);
   return (
-    <section className="bg-[#F9F7FB] py-20 w-full">
+    <section className="bg-[#fff] py-20 w-full">
       <div className="max-w-screen-xl mx-auto">
         {/* Title */}
-        <h2 className="text-[60px] leading-[67px] text-center text-black font-['Poppins'] mb-[62px] w-full mx-auto">
-          Ko par mums saka pasākumu dalībnieki?
+        <h2 className="max-w-[60%] text-[60px] leading-[67px] text-center text-black font-['Poppins'] mb-[62px] w-full mx-auto">
+          {sectionTitle}
         </h2>
 
         {/* Image Gallery with Navigation */}
@@ -158,7 +158,7 @@ const Faq = ({galleryImages,title,sectionCta}: {galleryImages?: string[], title?
         {/* CTA Button */}
         {sectionCta ? (
           <div className="pt-16">
-          <SectionCTA iconType="darkPurple" title={title} buttonText="sazināties">
+          <SectionCTA iconType={iconType} title={title} buttonText="sazināties" description={description}>
           </SectionCTA>
           </div>
         ) : (

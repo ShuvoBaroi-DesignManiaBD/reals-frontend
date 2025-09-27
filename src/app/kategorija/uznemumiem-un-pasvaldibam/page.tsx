@@ -89,9 +89,9 @@ const UznemumiemuUnPasvaldibamPage = () => {
       <EventsList
         title="Realizētie pasākumi uzņēmumiem un pašvaldībām"
         buttonText="apskatīt visus pasākumus"
-        events={events}
         className="py-20"
-      />
+        events={events}>
+        </EventsList>
 
       {/* Testimonials Section */}
       <Testimonials />

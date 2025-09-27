@@ -43,13 +43,13 @@ const SimpleApplicationForm: React.FC = () => {
 
   return (
     <section className="w-full flex justify-center py-16 lg:py-20">
-      <div className="max-w-screen-xl flex flex-col items-start bg-gradient-to-br from-[#109afc] via-[#7c3afc] to-[#c347fc] rounded-[20px] shadow-[4px_4px_28px_9px_rgba(209,81,255,0.2)] p-20 relative">
+      <div className="max-w-screen-xl flex flex-col items-start bg-gradient-to-br from-primary via-[#7c3afc] to-secondary rounded-[20px] shadow-[4px_4px_28px_9px_rgba(209,81,255,0.2)] p-20 relative">
         {/* Header Section */}
         <div className="flex items-start justify-between self-stretch"></div>
 
         {/* Content Section */}
         <div className="flex items-start justify-between self-stretch gap-10">
-          <div className="space-y-4">
+          <div className="space-y-8">
             <h2 className="w-[342px] text-white font-poppins text-[44px] leading-[49px] tracking-[0.88px] font-normal">
               Pieteikties pasākumam!
             </h2>

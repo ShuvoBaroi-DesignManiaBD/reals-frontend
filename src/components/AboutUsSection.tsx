@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const AboutUsSection: React.FC = () => {
   return (
-    <section className="w-full pb-20 ">
+    <section className="w-full py-20">
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Text Content */}

@@ -71,7 +71,7 @@ const ResponsibilityCard: React.FC<CardProps> = ({ image, alt, title, descriptio
 
 const SocialResponsibilitySection = () => {
   return (
-    <section className="flex flex-col items-start w-full max-w-screen-xl mx-auto px-4">
+    <section className="flex flex-col items-start w-full max-w-screen-xl mx-auto px-4 pt-20">
       {/* Main Title */}
       <h2 className="w-full text-center text-black font-poppins text-4xl lg:text-[60px] leading-tight lg:leading-[67px] tracking-[0] mb-7 lg:mb-[28px]">
         Sociālā atbildība

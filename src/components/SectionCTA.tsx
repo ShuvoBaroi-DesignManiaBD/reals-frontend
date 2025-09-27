@@ -1,10 +1,15 @@
 import Image from 'next/image';
+import { type DOMAttributes } from 'react';
+import { Button } from './ui/button';
 
-interface ctaProps{
-    iconType: 'darkPurple' | 'lightPurple' | 'skyBlue';
-    title?: string;
-    description?: string;
-    buttonText: string;
+// The type for the object expected by `dangerouslySetInnerHTML`
+type DangerousHtml = Pick<DOMAttributes<HTMLDivElement>, 'dangerouslySetInnerHTML'>;
+
+export interface ctaProps {
+  iconType: 'darkPurple' | 'lightPurple' | 'skyBlue';
+  title?: string | DangerousHtml;
+  description?: string;
+  buttonText: string;
 } 
 const SectionCTA = ({iconType, title, description, buttonText}: ctaProps) => {
     return (
@@ -49,9 +54,9 @@ const SectionCTA = ({iconType, title, description, buttonText}: ctaProps) => {
             </div>
           </div>
           <div className="mt-[46px]">
-            <button className="CTA-btn">
+            <Button size="xl" className="CTA-btn py-4 px-24">
               {buttonText}
-            </button>
+            </Button>
           </div>
         </div>
     );
