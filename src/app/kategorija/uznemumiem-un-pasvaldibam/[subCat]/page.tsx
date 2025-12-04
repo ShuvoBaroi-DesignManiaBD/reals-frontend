@@ -14,6 +14,13 @@ import SimpleApplicationForm from "@/components/SimpleApplicationForm";
 //   };
 // }
 
+
+// export async function generateStaticParams() {
+//   return [
+//     { subCat: "sporta-speles" },
+//   ];
+// }
+
 export default function SubCategoryPage() {
   const handleButtonClick = () => {
     // Handle button click action - could be scroll to form, open modal, etc.
